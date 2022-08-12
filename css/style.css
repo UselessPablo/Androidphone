@@ -75,4 +75,19 @@ header {
   display: flex;
   justify-content: end; }
   header img {
-    width: 20px; }
+    width: 18px; }
+
+.googleW {
+  width: 90%;
+  height: 30px;
+  border-radius: 1.7rem;
+  background-color: rgba(255, 255, 255, 0.308);
+  align-items: center;
+  display: flex;
+  margin-left: 5%; }
+  .googleW img {
+    max-height: 30px;
+    padding-bottom: 20px; }
+
+.alturaGen {
+  height: 60vh; }
