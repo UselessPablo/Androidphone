@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Indie+Flower&family=Lobster&family=Lobster+Two&family=Maven+Pro:wght@400;500&family=Quicksand:wght@400;700&family=Roboto:wght@100;400&family=Rubik+Dirt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Indie+Flower&family=Lobster&family=Lobster+Two&family=Maven+Pro:wght@400;500&family=Monoton&family=Quicksand:wght@400;700&family=Roboto:wght@100;400&family=Rubik+Dirt&display=swap");
+* {
+  margin: 2 px;
+  padding: 2px; }
+
+#bgBody {
+  background-image: url("../img/fondoand.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+p {
+  font-family: 'roboto';
+  text-align: center;
+  color: white;
+  font-size: 1.9rem; }
+
+a {
+  text-decoration: none; }
+
+nav {
+  padding-right: 3px;
+  padding-left: 3px;
+  background-color: rgba(163, 218, 218, 0.212);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: space-around;
+  border-radius: 1.3rem; }
+  nav img {
+    max-height: 40px; }
+
+.alturaDiv {
+  min-height: 90vh; }
+  .alturaDiv img {
+    max-height: 55px;
+    padding-top: 22px; }
+
+.relojDiv {
+  display: flex;
+  justify-content: center; }

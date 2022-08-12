@@ -1,0 +1,25 @@
+
+nav{
+    padding-right: 3px;
+    padding-left: 3px;
+    background-color: rgba(163, 218, 218, 0.212);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content:space-around;
+    border-radius: $borderRad;
+img{
+    max-height: 40px;
+}
+}
+.alturaDiv{
+    min-height:90vh;
+    img{
+        max-height: 55px;
+        padding-top: 22px;
+    }
+}
+.relojDiv{
+    display: flex;
+    justify-content: center;
+}
