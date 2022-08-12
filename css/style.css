@@ -21,7 +21,8 @@ a {
 
 h1 {
   font-family: 'roboto';
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 35px; }
 
 nav {
   padding-right: 3px;
@@ -79,7 +80,7 @@ header {
 
 .googleW {
   width: 90%;
-  height: 30px;
+  height: 35px;
   border-radius: 1.7rem;
   background-color: rgba(255, 255, 255, 0.308);
   align-items: center;
@@ -90,4 +91,4 @@ header {
     padding-bottom: 20px; }
 
 .alturaGen {
-  height: 60vh; }
+  height: 80vh; }
