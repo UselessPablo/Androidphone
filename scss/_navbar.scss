@@ -13,7 +13,7 @@ img{
 }
 }
 .alturaDiv{
-    min-height:90vh;
+    min-height:100vh;
     img{
         max-height: 55px;
         padding-top: 22px;
@@ -22,4 +22,34 @@ img{
 .relojDiv{
     display: flex;
     justify-content: center;
+}
+.borderTable{
+   width: 100%;
+    min-height: 100vh;
+    
+}
+main{
+    td{
+        font-family: 'roboto';
+        border-style: solid;
+        border-width: 1px;
+        text-align: end;
+        padding-right: 20px;
+        border-radius: $borderRad;
+        height: 50px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    img{
+       display: flex;
+       justify-content: star;
+    }
+}
+.navButtons{
+    display: flex;
+    justify-content: space-around;
+    img{
+        width: 25px;
+    }
 }
