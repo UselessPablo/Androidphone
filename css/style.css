@@ -70,3 +70,9 @@ main img {
   justify-content: space-around; }
   .navButtons img {
     width: 25px; }
+
+header {
+  display: flex;
+  justify-content: end; }
+  header img {
+    width: 20px; }
