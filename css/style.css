@@ -33,7 +33,7 @@ nav {
     max-height: 40px; }
 
 .alturaDiv {
-  min-height: 100vh; }
+  min-height: 90vh; }
   .alturaDiv img {
     max-height: 55px;
     padding-top: 22px; }
@@ -65,9 +65,15 @@ main img {
 
 .navButtons {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  overflow: hidden; }
   .navButtons img {
     width: 22px; }
+
+.sticky {
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
 
 header {
   display: flex;
@@ -108,7 +114,7 @@ header {
     padding-bottom: 20px; }
 
 .alturaGen {
-  height: 80vh; }
+  height: 60vh; }
 
 input {
   height: 25px;
@@ -167,4 +173,4 @@ input {
     vertical-align: middle; }
 
 .espacio {
-  margin-bottom: 40vh; }
+  margin-bottom: 50vh; }

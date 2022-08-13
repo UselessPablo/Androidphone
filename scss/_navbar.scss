@@ -13,7 +13,7 @@ img{
 }
 }
 .alturaDiv{
-    min-height:100vh;
+    min-height:90vh;
     img{
         max-height: 55px;
         padding-top: 22px;
@@ -50,10 +50,16 @@ main{
 .navButtons{
     display: flex;
     justify-content: space-around;
+    overflow: hidden;
     img{
         width: 22px;
     }
 }
+.sticky {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 header{
     display: flex;
     justify-content: end;
@@ -100,7 +106,7 @@ header{
  }
 }
 .alturaGen{
-    height: 80vh;
+    height: 60vh;
 }
 input{
     height: 25px;
@@ -169,6 +175,6 @@ input{
    
 }
 .espacio{
-    margin-bottom: 40vh;
+    margin-bottom: 50vh;
 }  
 
