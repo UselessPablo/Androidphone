@@ -58,9 +58,34 @@ header{
     display: flex;
     justify-content: end;
     img{
-        width: 18px;
+        height: 18px;
     }
+  
 }
+.headerClock{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 90%;
+    padding-bottom: 10px;
+    max-height: 1rem;
+    margin-bottom: 20px;
+    position: relative;
+    p{
+        color: black;
+        font-family: 'roboto';
+        font-size: 0.8em;
+        display: block;
+        margin-block-start: 0.1em;
+        margin-block-end: 0.1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+     
+    }
+
+}
+
 .googleW{
     width: 90%;
     height: 35px;
@@ -91,5 +116,59 @@ input{
         padding-bottom: 3px;
         padding-top: 3px;
         
-    
 }
+.menuGaleria{
+    display: grid;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    p{
+        color:black;
+        margin: 20px;
+    }
+}
+.container{
+    display: flex;
+
+}
+.imgFotos{
+   float: left;
+    display: flex;
+   justify-content: start;
+   width: 50%;
+   flex-wrap: wrap;
+   align-items: center;
+   img{
+    width: 100px;
+    height: auto;
+}
+}
+.imgFotos2{
+    float: right;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: flex-start;
+    p{
+        color: black;
+        font-size: 1rem;
+    }
+    img{
+        width: 40px;
+        
+    }
+    a{
+        font-family: 'roboto';
+        text-align: center;
+        float: bottom;
+        vertical-align: middle;
+    }
+   
+}
+.espacio{
+    margin-bottom: 40vh;
+}  
+
