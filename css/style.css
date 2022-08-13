@@ -50,27 +50,28 @@ nav {
   width: 100%;
   min-height: 100vh; }
 
+main tr {
+  max-height: 20em; }
+
 main td {
   font-family: 'roboto';
-  border-style: solid;
-  border-width: 1px;
   text-align: end;
   padding-right: 20px;
   border-radius: 1.3rem;
-  height: 50px;
+  height: 45px;
   align-items: center;
   display: flex;
   justify-content: space-between; }
 
 main img {
   display: flex;
-  justify-content: star; }
+  justify-content: start; }
 
 .navButtons {
   display: flex;
   justify-content: space-around; }
   .navButtons img {
-    width: 25px; }
+    width: 22px; }
 
 header {
   display: flex;
@@ -92,3 +93,17 @@ header {
 
 .alturaGen {
   height: 80vh; }
+
+input {
+  height: 25px;
+  width: 95%;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 1.5rem;
+  margin-bottom: 35px;
+  margin-top: 20px;
+  font-family: 'roboto';
+  color: black;
+  cursor: pointer;
+  padding-bottom: 3px;
+  padding-top: 3px; }
