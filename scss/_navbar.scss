@@ -207,3 +207,76 @@ ol{
     }
        
     }
+    .modal {
+        display: block; /* Hidden by default */
+        position: bottom; /* Stay in place */
+        z-index: 5; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 40%; /* Full height */
+        margin-bottom: 170px; /* Enable scroll if needed */
+       
+      }
+      
+      /* Modal Content/Box */
+      .modal-content {
+        background-color: #fefefe;
+        margin: 10% auto; /* 15% from the top and centered */
+        padding: 20px;
+       
+        width: 80%; /* Could be more or less, depending on screen size */
+      p{
+        color: black;
+      }
+    }
+      
+      /* The Close Button */
+      .close {
+       
+        float: right;
+        font-size: 0.5rem;
+        font-weight: bold;
+        z-index: 2;
+    }
+      
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      #myBtn{
+      width: 40px;
+      background-size: cover;
+      border-style: none;
+      margin-right: 10%;
+     
+    }
+      .flexDiv{
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+      }
+      .tecladoDiv{
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 35vh;
+        z-index: 10;
+        min-width: 200px;
+    }
+      .tecla{
+        p{
+            font-size: 1rem;
+        }
+        width: 25px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 1.7rem;
+        margin: 10px;
+        padding: 5px;
+        justify-content: center;
+    }
+    .tecla:hover{
+        background-color: green;
+    }
