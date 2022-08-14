@@ -33,7 +33,7 @@ nav {
     max-height: 40px; }
 
 .alturaDiv {
-  min-height: 90vh; }
+  height: 84vh; }
   .alturaDiv img {
     max-height: 55px;
     padding-top: 22px; }
@@ -44,7 +44,7 @@ nav {
 
 .borderTable {
   width: 100%;
-  min-height: 100vh; }
+  height: 100vh; }
 
 main tr {
   max-height: 20em; }
@@ -73,7 +73,8 @@ main img {
 .sticky {
   position: fixed;
   bottom: 0;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 3px; }
 
 header {
   display: flex;
@@ -111,7 +112,8 @@ header {
   margin-left: 5%; }
   .googleW img {
     max-height: 30px;
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    padding-left: 3px; }
 
 .alturaGen {
   height: 60vh; }
@@ -129,6 +131,8 @@ input {
   cursor: pointer;
   padding-bottom: 3px;
   padding-top: 3px; }
+  input text {
+    padding-left: 4px; }
 
 .menuGaleria {
   display: grid;
@@ -174,3 +178,19 @@ input {
 
 .espacio {
   margin-bottom: 50vh; }
+
+.ulDiv {
+  display: list-item; }
+
+ol {
+  height: 90vh;
+  font-family: 'maven pro'; }
+  ol p {
+    border-radius: 2rem;
+    width: 40px;
+    padding-bottom: 5px;
+    background-color: green; }
+  ol li {
+    list-style: none;
+    display: list-item;
+    text-align: left; }
