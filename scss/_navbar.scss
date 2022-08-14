@@ -8,7 +8,9 @@ nav{
     align-items: flex-end;
     justify-content:space-around;
     border-radius: $borderRad;
-img{
+    margin-bottom: 10px;
+    z-index: 2;
+    img{
     max-height: 40px;
 }
 }
@@ -51,11 +53,13 @@ main{
     display: flex;
     justify-content: space-around;
     overflow: hidden;
+    
     img{
         width: 22px;
     }
 }
 .sticky {
+    z-index: 3;
     position: fixed;
     bottom: 0;
     width: 100%;

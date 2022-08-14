@@ -28,7 +28,9 @@ nav {
   flex-direction: row-reverse;
   align-items: flex-end;
   justify-content: space-around;
-  border-radius: 1.3rem; }
+  border-radius: 1.3rem;
+  margin-bottom: 10px;
+  z-index: 2; }
   nav img {
     max-height: 40px; }
 
@@ -71,6 +73,7 @@ main img {
     width: 22px; }
 
 .sticky {
+  z-index: 3;
   position: fixed;
   bottom: 0;
   width: 100%;
