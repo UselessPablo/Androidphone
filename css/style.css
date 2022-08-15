@@ -308,9 +308,10 @@ button img {
     background-clip: padding-box;
     outline: 0;
     transition: transform .3s ease-in-out;
-    min-height: 65vh;
+    min-height: 70vh;
     overflow-y: none;
     margin-bottom: 50px;
+    border-radius: 1.5rem;
     
   }
 .offcanvas-body {
@@ -321,7 +322,6 @@ button img {
 }
 .digit{
   font-family: 'roboto';
-  margin: 4px;
   margin-left: 10px;
 }
 #telefono{
@@ -331,9 +331,18 @@ button img {
 
 }
   .imgSize{
-    width: 45px;
+    width: 65px;
+    padding-left: 5px;
+    
   }
-  
+  .digit, .dig {
+    float: left;
+    padding: 1px 35px;
+    width: 30px;
+    font-size: 2rem;
+    cursor: pointer;
+    
+}
 
 
 
