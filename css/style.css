@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Indie+Flower&family=Lobster&family=Lobster+Two&family=Maven+Pro:wght@400;500&family=Quicksand:wght@400;700&family=Roboto:wght@100;400&family=Rubik+Dirt&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Indie+Flower&family=Lobster&family=Lobster+Two&family=Maven+Pro:wght@400;500&family=Monoton&family=Quicksand:wght@400;700&family=Roboto:wght@100;400&family=Rubik+Dirt&display=swap");
+html{
+  margin: 3px;
+}
 #bgBody {
   background-image: url("../img/fondoand.png");
   background-position: center;
@@ -21,24 +24,27 @@ h1 {
   margin-bottom: 35px; }
 
 nav {
+  height: 50px;
   padding-right: 3px;
   padding-left: 3px;
-  background-color: rgba(163, 218, 218, 0.212);
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-end;
   justify-content: space-around;
-  border-radius: 1.3rem;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   z-index: 2; }
-  nav img {
-    max-height: 40px; }
+  img {
+    width: 35px; 
+  padding-bottom: 12px;
+  }
 
 .alturaDiv {
-  height: 84vh; }
-  .alturaDiv img {
-    max-height: 55px;
-    padding-top: 22px; }
+  max-height: 120vh; }
+  .alturaDiv 
+  img {
+    width: 50px;
+    padding-top: 27px; 
+    margin-right: 5px;}
 
 .relojDiv {
   display: flex;
@@ -67,23 +73,27 @@ main img {
 
 .navButtons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   overflow: hidden; }
   .navButtons img {
     width: 22px; }
 
 .sticky {
-  z-index: 3;
+  z-index: 6;
   position: fixed;
   bottom: 0;
-  width: 100%;
-  margin-bottom: 3px; }
+  width: 70%;
+  margin-bottom: 12px; 
+  margin-left: 16%;
+
+}
 
 header {
   display: flex;
   justify-content: end; }
   header img {
-    height: 18px; }
+    height: 18px; 
+  width: 20px;}
 
 .headerClock {
   display: flex;
@@ -112,14 +122,17 @@ header {
   background-color: rgba(255, 255, 255, 0.308);
   align-items: center;
   display: flex;
-  margin-left: 5%; }
+  margin-left: 5%; 
+  margin-bottom: 60px;
+}
+  
   .googleW img {
-    max-height: 30px;
+    width: 30px;
     padding-bottom: 20px;
     padding-left: 3px; }
 
 .alturaGen {
-  height: 60vh; }
+  height: 62vh; }
 
 input {
   height: 25px;
@@ -192,8 +205,10 @@ ol {
     border-radius: 2rem;
     width: 40px;
     padding-bottom: 5px;
-    background-color: green; }
-  ol li {
+    background-color: rgb(0, 98, 128); }
+  
+  
+    ol li {
     list-style: none;
     display: list-item;
     text-align: left; }
@@ -257,8 +272,10 @@ button img {
   margin: 30px auto;
   height: 420px;
   text-align: center;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
-
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); 
+  border-radius: 1.3rem;
+}
+  
 #output {
   font-family: "Exo";
   font-size: 2rem;
@@ -304,7 +321,7 @@ button img {
     flex-direction: column;
     max-width: 100%;
     visibility: hidden;
-    background-color: #fff;
+    background-color: rgb(204, 245, 245);
     background-clip: padding-box;
     outline: 0;
     transition: transform .3s ease-in-out;
@@ -331,7 +348,8 @@ button img {
 
 }
   .imgSize{
-    width: 65px;
+    margin-top: 10px;
+    width: 70px;
     padding-left: 5px;
     
   }
