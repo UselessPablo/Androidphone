@@ -1,25 +1,50 @@
-// Get the modal
-var modal = document.getElementById("myModal");
+/* DialPad by Anthony Bernard*/
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+let btns = document.getElementById("btns");
+let showPicked = document.getElementById("showPicked");
+let buttonNumbers = [
+  [1, '<i class="material-icons" style="font-size: 11px">&#xe0d9;</i>'],
+  [2, "ABC"],
+  [3, "DEF"],
+  [4, "GHI"],
+  [5, "JKL"],
+  [6, "MNO"],
+  [7, "PQRS"],
+  [8, "TUV"],
+  [9, "WXYZ"],
+  ["*", ""],
+  [0, ""],
+  ["#", ""]
+];
+let picked = [];
+let deleteNums = document.getElementById("delete");
+let call = document.getElementById("call");
+let end = document.getElementById("end");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+buttonNumbers.forEach(numbers => {
+  btns.innerHTML += `
+    <button onclick="addNumbers(this.value)" class="btn btn-light m-1" style="width:5rem; hieght:10rem;" type="button" value="${
+      numbers[0]
+    }">${numbers[0]}<p>${numbers[1]}</p></button>`;
+});
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
+function addNumbers(numbers) {
+  picked.push(numbers);
+  showPicked.innerHTML = picked.join("");
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+deleteNums.addEventListener("click", () => {
+  picked.pop();
+  showPicked.innerHTML = picked.join("");
+  console.log(picked);
+});
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+call.addEventListener("click", () => {
+  showPicked.innerHTML = `Calling ${picked.join("")}`;
+  picked = [];
+});
+
+end.addEventListener("click", () => {
+  showPicked.innerHTML = "Call Ended";
+  picked = [];
+});

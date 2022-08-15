@@ -198,63 +198,16 @@ ol {
     display: list-item;
     text-align: left; }
 
-.modal {
-  display: block;
-  /* Hidden by default */
-  position: bottom;
-  /* Stay in place */
-  z-index: 5;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 40%;
-  /* Full height */
-  margin-bottom: 170px;
-  /* Enable scroll if needed */ }
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;
-  /* 15% from the top and centered */
-  padding: 20px;
-  width: 80%;
-  /* Could be more or less, depending on screen size */ }
-  .modal-content p {
-    color: black; }
-
-/* The Close Button */
-.close {
-  float: right;
-  font-size: 0.5rem;
-  font-weight: bold;
-  z-index: 2; }
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer; }
-
-#myBtn {
-  width: 40px;
-  background-size: cover;
-  border-style: none;
-  margin-right: 10%; }
-
 .flexDiv {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: flex-end; }
 
 .tecladoDiv {
   display: flex;
   flex-wrap: wrap;
-  max-height: 35vh;
-  z-index: 10;
-  min-width: 200px; }
+  max-height: 50vh;
+  min-width: 220px; }
 
 .tecla {
   width: 25px;
@@ -269,3 +222,118 @@ ol {
 
 .tecla:hover {
   background-color: green; }
+
+.containBtn {
+  height: 90vh;
+  margin-left: 2px;
+  padding-bottom: 30px; }
+
+button img {
+  width: 30px; }
+
+.row {
+  margin: 0 auto;
+  width: 280px;
+  clear: both;
+  text-align: center;
+  font-family: 'Exo'; }
+
+.digit,
+.dig {
+  float: left;
+  padding: 10px 30px;
+  width: 30px;
+  font-size: 2rem;
+  cursor: pointer; }
+
+.sub {
+  font-size: 0.8rem;
+  color: grey; }
+
+.container {
+  background-color: white;
+  width: 320px;
+  padding: 20px;
+  margin: 30px auto;
+  height: 420px;
+  text-align: center;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+#output {
+  font-family: "Exo";
+  font-size: 2rem;
+  height: 60px;
+  font-weight: bold;
+  color: #1976d2; }
+
+#call {
+  display: inline-block;
+  background-color: #66bb6a;
+  padding: 4px 30px;
+  margin: 10px;
+  color: white;
+  border-radius: 4px;
+  float: left;
+  cursor: pointer; }
+
+.botrow {
+  margin: 0 auto;
+  width: 280px;
+  clear: both;
+  text-align: center;
+  font-family: 'Exo'; }
+
+.digit:active,
+.dig:active {
+  background-color: #e6e6e6; }
+
+#call:hover {
+  background-color: #81c784; }
+
+.dig {
+  float: left;
+  padding: 10px 20px;
+  margin: 10px;
+  width: 30px;
+  cursor: pointer; }
+  .offcanvas {
+    position: fixed;
+    bottom: 0;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    visibility: hidden;
+    background-color: #fff;
+    background-clip: padding-box;
+    outline: 0;
+    transition: transform .3s ease-in-out;
+    min-height: 65vh;
+    overflow-y: none;
+    margin-bottom: 50px;
+    
+  }
+.offcanvas-body {
+  flex-grow: 1;
+  padding: 1rem 1rem;
+ overflow-y: none;
+ 
+}
+.digit{
+  font-family: 'roboto';
+  margin: 4px;
+  margin-left: 10px;
+}
+#telefono{
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+
+}
+  .imgSize{
+    width: 45px;
+  }
+  
+
+
+
