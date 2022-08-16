@@ -56,9 +56,10 @@ main{
 }
 .navButtons{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     overflow: hidden;
-    
+    width: 90%;
+    margin-left: 5%;
     img{
         width: 22px;
     }
@@ -67,7 +68,7 @@ main{
     z-index: 3;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 90%;
     margin-bottom: 3px;
   }
 header{
@@ -294,7 +295,7 @@ ol{
         font-size: 2rem;
         height: 60px;
         font-weight: bold;
-        color: #1976d2;
+        color: #003f7eea;
       }
       
       #call {

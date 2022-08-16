@@ -74,8 +74,10 @@ main img {
 
 .navButtons {
   display: flex;
-  justify-content: space-around;
-  overflow: hidden; }
+  justify-content: space-evenly;
+  overflow: hidden;
+  width: 90%;
+  margin-left: 5%; }
   .navButtons img {
     width: 22px; }
 
@@ -83,7 +85,7 @@ main img {
   z-index: 3;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 90%;
   margin-bottom: 3px; }
 
 header {
@@ -274,7 +276,7 @@ button {
   font-size: 2rem;
   height: 60px;
   font-weight: bold;
-  color: #1976d2; }
+  color: #003f7eea; }
 
 #call {
   display: inline-block;
