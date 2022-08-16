@@ -2,28 +2,30 @@
 nav{
     padding-right: 3px;
     padding-left: 3px;
-    background-color: rgba(163, 218, 218, 0.212);
     display: flex;
     flex-direction: row-reverse;
-    align-items: flex-end;
+    align-items: center;
     justify-content:space-around;
-    border-radius: $borderRad;
-    margin-bottom: 10px;
+    margin-top: 45px;
     z-index: 2;
     img{
     max-height: 40px;
 }
 }
 .alturaDiv{
-    height:84vh;
+    height:94vh;
     img{
         max-height: 55px;
-        padding-top: 22px;
+        padding-top: 30px;
     }
 }
 .relojDiv{
     display: flex;
     justify-content: center;
+    p{
+        color: black;
+        font-weight: bold;
+    }
 }
 .borderTable{
    width: 100%;
@@ -69,7 +71,8 @@ header{
     display: flex;
     justify-content: end;
     img{
-        height: 18px;
+        width: 1.3rem;
+        height: 1.3rem;
     }
   
 }
@@ -79,13 +82,13 @@ header{
     align-items: flex-start;
     width: 90%;
     padding-bottom: 10px;
-    max-height: 1rem;
+    max-height: 1.6rem;
     margin-bottom: 20px;
     position: relative;
     p{
         color: black;
         font-family: 'roboto';
-        font-size: 0.8em;
+        font-size: 1em;
         display: block;
         margin-block-start: 0.1em;
         margin-block-end: 0.1em;
@@ -243,6 +246,7 @@ ol{
         padding-bottom: 30px;
     }
     button{
+        margin-bottom: 5px;
         img{
             width: 30px;
         }
@@ -297,7 +301,6 @@ ol{
         margin: 10px;
         color: white;
         border-radius: 4px;
-        float: left;
         cursor: pointer;
       }
       
@@ -319,9 +322,46 @@ ol{
       }
       
       .dig {
+        
         float: left;
         padding: 10px 20px;
         margin: 10px;
         width: 30px;
         cursor: pointer;
       }
+      .offcanvas {
+        height: 70vh;
+        position: fixed;
+        bottom: 0;
+        z-index: 1050;
+        display: flex;
+        /* flex-direction: column; */
+        max-width: 100%;
+        margin-left: 20px;
+        visibility: hidden;
+        background-color: rgb(226, 255, 246);
+        border-radius: 1.6rem;
+        margin-right: 20px;
+        /* background-clip: padding-box; */
+        /* outline: 0; */
+        transition: transform .3s ease-in-out;}
+        .digit, .dig {
+            font-family: 'roboto';
+            float: left;
+            padding: 1px 30px;
+            width: 30px;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+            width: 100%;
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+            margin-right: auto;
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        .imgSize{
+            width: 45px;
+            margin-left: 28%;
+        }

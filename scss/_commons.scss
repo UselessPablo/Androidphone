@@ -3,7 +3,9 @@ $offcanvas-vertical-height:50vh;
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Indie+Flower&family=Lobster&family=Lobster+Two&family=Maven+Pro:wght@400;500&family=Quicksand:wght@400;700&family=Roboto:wght@100;400&family=Rubik+Dirt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Indie+Flower&family=Lobster&family=Lobster+Two&family=Maven+Pro:wght@400;500&family=Monoton&family=Quicksand:wght@400;700&family=Roboto:wght@100;400&family=Rubik+Dirt&display=swap');
 
-
+html{
+    padding: 2px;
+}
 #bgBody{
     background-image: url('../img/fondoand.png');
     background-position: center;

@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Indie+Flower&family=Lobster&family=Lobster+Two&family=Maven+Pro:wght@400;500&family=Quicksand:wght@400;700&family=Roboto:wght@100;400&family=Rubik+Dirt&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Indie+Flower&family=Lobster&family=Lobster+Two&family=Maven+Pro:wght@400;500&family=Monoton&family=Quicksand:wght@400;700&family=Roboto:wght@100;400&family=Rubik+Dirt&display=swap");
-html{
-  margin: 3px;
-}
+html {
+  padding: 2px; }
+
 #bgBody {
   background-image: url("../img/fondoand.png");
   background-position: center;
@@ -24,31 +24,29 @@ h1 {
   margin-bottom: 35px; }
 
 nav {
-  height: 50px;
   padding-right: 3px;
   padding-left: 3px;
   display: flex;
   flex-direction: row-reverse;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-around;
-  margin-bottom: 50px;
+  margin-top: 45px;
   z-index: 2; }
-  img {
-    width: 35px; 
-  padding-bottom: 12px;
-  }
+  nav img {
+    max-height: 40px; }
 
 .alturaDiv {
-  max-height: 120vh; }
-  .alturaDiv 
-  img {
-    width: 50px;
-    padding-top: 27px; 
-    margin-right: 5px;}
+  height: 94vh; }
+  .alturaDiv img {
+    max-height: 55px;
+    padding-top: 30px; }
 
 .relojDiv {
   display: flex;
   justify-content: center; }
+  .relojDiv p {
+    color: black;
+    font-weight: bold; }
 
 .borderTable {
   width: 100%;
@@ -73,27 +71,24 @@ main img {
 
 .navButtons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   overflow: hidden; }
   .navButtons img {
     width: 22px; }
 
 .sticky {
-  z-index: 6;
+  z-index: 3;
   position: fixed;
   bottom: 0;
-  width: 70%;
-  margin-bottom: 12px; 
-  margin-left: 16%;
-
-}
+  width: 100%;
+  margin-bottom: 3px; }
 
 header {
   display: flex;
   justify-content: end; }
   header img {
-    height: 18px; 
-  width: 20px;}
+    width: 1.3rem;
+    height: 1.3rem; }
 
 .headerClock {
   display: flex;
@@ -101,13 +96,13 @@ header {
   align-items: flex-start;
   width: 90%;
   padding-bottom: 10px;
-  max-height: 1rem;
+  max-height: 1.6rem;
   margin-bottom: 20px;
   position: relative; }
   .headerClock p {
     color: black;
     font-family: 'roboto';
-    font-size: 0.8em;
+    font-size: 1em;
     display: block;
     margin-block-start: 0.1em;
     margin-block-end: 0.1em;
@@ -122,17 +117,14 @@ header {
   background-color: rgba(255, 255, 255, 0.308);
   align-items: center;
   display: flex;
-  margin-left: 5%; 
-  margin-bottom: 60px;
-}
-  
+  margin-left: 5%; }
   .googleW img {
-    width: 30px;
+    max-height: 30px;
     padding-bottom: 20px;
     padding-left: 3px; }
 
 .alturaGen {
-  height: 62vh; }
+  height: 60vh; }
 
 input {
   height: 25px;
@@ -205,10 +197,8 @@ ol {
     border-radius: 2rem;
     width: 40px;
     padding-bottom: 5px;
-    background-color: rgb(0, 98, 128); }
-  
-  
-    ol li {
+    background-color: green; }
+  ol li {
     list-style: none;
     display: list-item;
     text-align: left; }
@@ -243,8 +233,10 @@ ol {
   margin-left: 2px;
   padding-bottom: 30px; }
 
-button img {
-  width: 30px; }
+button {
+  margin-bottom: 5px; }
+  button img {
+    width: 30px; }
 
 .row {
   margin: 0 auto;
@@ -272,10 +264,8 @@ button img {
   margin: 30px auto;
   height: 420px;
   text-align: center;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); 
-  border-radius: 1.3rem;
-}
-  
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
 #output {
   font-family: "Exo";
   font-size: 2rem;
@@ -290,7 +280,6 @@ button img {
   margin: 10px;
   color: white;
   border-radius: 4px;
-  float: left;
   cursor: pointer; }
 
 .botrow {
@@ -313,54 +302,40 @@ button img {
   margin: 10px;
   width: 30px;
   cursor: pointer; }
-  .offcanvas {
-    position: fixed;
-    bottom: 0;
-    z-index: 1050;
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    visibility: hidden;
-    background-color: rgb(204, 245, 245);
-    background-clip: padding-box;
-    outline: 0;
-    transition: transform .3s ease-in-out;
-    min-height: 70vh;
-    overflow-y: none;
-    margin-bottom: 50px;
-    border-radius: 1.5rem;
-    
-  }
-.offcanvas-body {
-  flex-grow: 1;
-  padding: 1rem 1rem;
- overflow-y: none;
- 
-}
-.digit{
-  font-family: 'roboto';
-  margin-left: 10px;
-}
-#telefono{
+
+.offcanvas {
+  height: 70vh;
+  position: fixed;
+  bottom: 0;
+  z-index: 1050;
   display: flex;
-  justify-content: center;
+  /* flex-direction: column; */
+  max-width: 100%;
+  margin-left: 20px;
+  visibility: hidden;
+  background-color: #e2fff6;
+  border-radius: 1.6rem;
   margin-right: 20px;
+  /* background-clip: padding-box; */
+  /* outline: 0; */
+  transition: transform .3s ease-in-out; }
 
-}
-  .imgSize{
-    margin-top: 10px;
-    width: 70px;
-    padding-left: 5px;
-    
-  }
-  .digit, .dig {
-    float: left;
-    padding: 1px 35px;
-    width: 30px;
-    font-size: 2rem;
-    cursor: pointer;
-    
-}
+.digit, .dig {
+  font-family: 'roboto';
+  float: left;
+  padding: 1px 30px;
+  width: 30px;
+  font-size: 2rem;
+  cursor: pointer; }
 
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: 30px;
+  margin-bottom: 15px; }
 
-
+.imgSize {
+  width: 45px;
+  margin-left: 28%; }
