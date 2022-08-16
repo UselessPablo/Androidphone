@@ -1,45 +1,55 @@
-
-nav{
+nav {
     padding-right: 3px;
     padding-left: 3px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-around;
     z-index: 2;
     margin-top: 35%;
-    img{
-    width: 45px;
-    
-}
+
+    img {
+        width: 45px;
+
+    }
 }
 
-.alturaDiv{
-    height:95% ;
-    
-    img{
+.alturaDiv {
+    height: 95%;
+
+    img {
         max-height: 55px;
         padding-top: 30px;
     }
 }
-.relojDiv{
+
+.relojDiv {
     display: flex;
     justify-content: center;
-    p{
+
+    p {
         color: black;
         font-weight: bold;
     }
+
+    img {
+        width: 55px;
+        padding-top: 30px;
+    }
 }
-.borderTable{
-   width: 100%;
+
+.borderTable {
+    width: 100%;
     height: 100vh;
-    
+
 }
-main{
-    tr{
+
+main {
+    tr {
         max-height: 20em;
     }
-    td{
+
+    td {
         font-family: 'roboto';
         text-align: end;
         padding-right: 20px;
@@ -49,38 +59,45 @@ main{
         display: flex;
         justify-content: space-between;
     }
-    img{
-       display: flex;
-       justify-content: start;
+
+    img {
+        display: flex;
+        justify-content: start;
     }
 }
-.navButtons{
+
+.navButtons {
     display: flex;
     justify-content: space-evenly;
     overflow: hidden;
     width: 90%;
     margin-left: 5%;
-    img{
+
+    img {
         width: 22px;
     }
 }
+
 .sticky {
     z-index: 3;
     position: fixed;
     bottom: 0;
     width: 90%;
     margin-bottom: 3px;
-  }
-header{
+}
+
+header {
     display: flex;
     justify-content: end;
-    img{
+
+    img {
         width: 1.3rem;
         height: 1.3rem;
     }
-  
+
 }
-.headerClock{
+
+.headerClock {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -89,7 +106,8 @@ header{
     max-height: 1.6rem;
     margin-bottom: 20px;
     position: relative;
-    p{
+
+    p {
         color: black;
         font-family: 'roboto';
         font-size: 1em;
@@ -99,12 +117,12 @@ header{
         margin-inline-start: 0px;
         margin-inline-end: 0px;
         font-weight: bold;
-     
+
     }
 
 }
 
-.googleW{
+.googleW {
     width: 90%;
     height: 35px;
     border-radius: 1.7rem;
@@ -113,16 +131,18 @@ header{
     display: flex;
     margin-left: 5%;
 
-    img{
-    max-height: 30px;
-    padding-bottom: 20px;
-    padding-left: 3px;
+    img {
+        max-height: 30px;
+        padding-top: 3px;
+        padding-left: 3px;
+    }
 }
-}
-.alturaGen{
+
+.alturaGen {
     height: 60vh;
 }
-input{
+
+input {
     height: 25px;
     width: 95%;
     border-style: solid;
@@ -130,43 +150,49 @@ input{
     border-radius: 1.5rem;
     margin-bottom: 35px;
     margin-top: 20px;
-        font-family: 'roboto';
-        color: black;
-        cursor: pointer;
-        padding-bottom: 3px;
-        padding-top: 3px;
-        text{
-            padding-left: 4px;
-        }
+    font-family: 'roboto';
+    color: black;
+    cursor: pointer;
+    padding-bottom: 3px;
+    padding-top: 3px;
+
+    text {
+        padding-left: 4px;
+    }
 }
-.menuGaleria{
+
+.menuGaleria {
     display: grid;
     width: 100%;
     display: flex;
     justify-content: center;
-    
-    p{
-        color:black;
+
+    p {
+        color: black;
         margin: 20px;
     }
 }
-.container{
+
+.container {
     display: flex;
 
 }
-.imgFotos{
-   float: left;
+
+.imgFotos {
+    float: left;
     display: flex;
-   justify-content: start;
-   width: 50%;
-   flex-wrap: wrap;
-   align-items: center;
-   img{
-    width: 100px;
-    height: auto;
+    justify-content: start;
+    width: 50%;
+    flex-wrap: wrap;
+    align-items: center;
+
+    img {
+        width: 100px;
+        height: auto;
+    }
 }
-}
-.imgFotos2{
+
+.imgFotos2 {
     float: right;
     display: flex;
     justify-content: end;
@@ -174,31 +200,34 @@ input{
     width: 50%;
     align-items: center;
     justify-content: flex-start;
-    p{
+
+    p {
         color: black;
         font-size: 1rem;
     }
-    img{
+
+    img {
         width: 40px;
-        
+
     }
-    a{
+
+    a {
         font-family: 'roboto';
         text-align: center;
         float: bottom;
         vertical-align: middle;
     }
-   
+
 }
-.espacio{
-    margin-bottom: 50vh;
-}  
-.ulDiv{
+
+.ulDiv {
     display: list-item;
 }
-ol{
+
+ol {
     height: 90vh;
     font-family: 'maven pro';
+
     p {
         border-radius: 2rem;
         width: 40px;
@@ -206,168 +235,227 @@ ol{
         background-color: green;
     }
 
-    li{
-       list-style: none;
-       display: list-item;
-       text-align: left;
-        
+    li {
+        list-style: none;
+        display: list-item;
+        text-align: left;
+
     }
-       
-    }
-    
-    
-      .flexDiv{
+
+#apps {
+        margin-top: 20px;
+    a{
+    img {
         display: flex;
-        justify-content: center;
-        align-items: flex-end;
-      }
-      .tecladoDiv{
-        display: flex;
-        flex-wrap: wrap;
-        max-height: 50vh;
-        min-width: 220px;
-    }
-      .tecla{
-        p{
-            font-size: 1rem;
-        }
-        width: 25px;
-        border-style: solid;
-        border-width: 1px;
-        border-radius: 1.7rem;
-        margin: 10px;
-        padding: 5px;
-        justify-content: center;
-    }
-    .tecla:hover{
-        background-color: green;
-    }
-    //telefono
-    
-    .containBtn{
-        height: 90vh;
-        margin-left: 2px ;
-        padding-bottom: 30px;
-    }
-    button{
-        margin-bottom: 5px;
-        img{
-            width: 30px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 40px;
         }
     }
+}
+.div{
+    display: flex;
+}
 
 
+.contFlex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: 50%;
+}
 
-    .row {
-        margin: 0 auto;
-        width: 280px;
-        clear: both;
-        text-align: center;
-        font-family: 'Exo';
-      }
-      
-      .digit,
-      .dig {
-        float: left;
-        padding: 10px 30px;
+.tecladoDiv {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 50vh;
+    min-width: 220px;
+}
+
+.tecla {
+    p {
+        font-size: 1rem;
+    }
+
+    width: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1.7rem;
+    margin: 10px;
+    padding: 5px;
+    justify-content: center;
+}
+
+.tecla:hover {
+    background-color: green;
+}
+
+//telefono
+
+.containBtn {
+    height: 30px;
+    margin-left: 30%;
+    padding-bottom: 30px;
+
+}
+button {
+    margin-bottom: 5px;
+    margin-left: 30%;
+    img {
         width: 30px;
-        font-size: 2rem;
-        cursor: pointer;
-      }
-      
-      .sub {
-        font-size: 0.8rem;
-        color: grey;
-      }
-      
-      .container {
-        background-color: white;
-        width: 320px;
-        padding: 20px;
-        margin: 30px auto;
-        height: 420px;
-        text-align: center;
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-      }
-      
-      #output {
-        font-family: "roboto";
-        font-size: 2rem;
-        height: 60px;
-        font-weight: bold;
-        color: #003f7eea;
-      }
-      
-      #call {
-        display: inline-block;
-        background-color: #66bb6a;
-        padding: 4px 30px;
-        margin: 10px;
-        color: white;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      
-      .botrow {
-        margin: 0 auto;
-        width: 280px;
-        clear: both;
-        text-align: center;
-        font-family: 'roboto';
-      }
-      
-      .digit:active,
-      .dig:active {
-        background-color: #e6e6e6;
-      }
-      
-      #call:hover {
-        background-color: #3fafaf;
-        border-radius: 1.7rem;
     }
-      
-      .dig {
-        
-        float: left;
-        padding: 10px 20px;
-        margin: 10px;
-        width: 30px;
-        cursor: pointer;
-      }
-      .offcanvas {
-        height: 70vh;
-        position: fixed;
-        bottom: 0;
-        z-index: 1050;
-        display: flex;
-        /* flex-direction: column; */
-        max-width: 100%;
-        margin-left: 20px;
-        visibility: hidden;
-        background-color: rgb(226, 255, 246);
-        border-radius: 1.6rem;
-        margin-right: 20px;
-        /* background-clip: padding-box; */
-        /* outline: 0; */
-        transition: transform .3s ease-in-out;}
-        .digit, .dig {
-            font-family: 'roboto';
-            float: left;
-            padding: 1px 30px;
-            width: 30px;
-            font-size: 2rem;
-            cursor: pointer;
-        }
-        .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-            width: 100%;
-            padding-right: var(--bs-gutter-x,.75rem);
-            padding-left: var(--bs-gutter-x,.75rem);
-            padding-top: 50px;
-            margin-right: auto;
-            margin-left: 30px;
-            margin-bottom: 15px;
-        }
-        .imgSize{
-            width: 45px;
-            margin-left: 30%;
-        }
+}
+}
+
+.espacio{
+    height: 70vh;
+}
+
+.row {
+    margin: 0 auto;
+    width: 280px;
+    clear: both;
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+.digit,
+.dig {
+    float: left;
+    padding: 10px 30px;
+    width: 30px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.sub {
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.container {
+    background-color: white;
+    width: 320px;
+    padding: 20px;
+    margin: 30px auto;
+    height: 420px;
+    text-align: center;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#output {
+    font-family: "roboto";
+    font-size: 2rem;
+    height: 60px;
+    font-weight: bold;
+    color: #003f7eea;
+}
+
+#call {
+    display: inline-block;
+    background-color: #66bb6a;
+    padding: 4px 30px;
+    margin: 10px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.botrow {
+    margin: 0 auto;
+    width: 280px;
+    clear: both;
+    text-align: center;
+    font-family: 'roboto';
+}
+
+.digit:active,
+.dig:active {
+    background-color: #e6e6e6;
+}
+
+#call:hover {
+    background-color: #3fafaf;
+    border-radius: 1.7rem;
+}
+
+.dig {
+
+    float: left;
+    padding: 10px 20px;
+    margin: 10px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.offcanvas {
+    height: 70vh;
+    position: fixed;
+    bottom: 0;
+    z-index: 1050;
+    display: flex;
+    /* flex-direction: column; */
+    max-width: 100%;
+    margin-left: 20px;
+    visibility: hidden;
+    background-color: rgb(226, 255, 246);
+    border-radius: 1.6rem;
+    margin-right: 20px;
+    /* background-clip: padding-box; */
+    /* outline: 0; */
+    transition: transform .3s ease-in-out;
+}
+
+.digit,
+.dig {
+    font-family: 'roboto';
+    float: left;
+    padding: 1px 30px;
+    width: 30px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    padding-top: 50px;
+    margin-right: auto;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+
+
+.imgSize {
+    width: 45px;
+    margin-left: 30%;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #24c7b9;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-left: 40%;
+}
