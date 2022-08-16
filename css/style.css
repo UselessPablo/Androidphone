@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Indie+Flower&family=Lobster&family=Lobster+Two&family=Maven+Pro:wght@400;500&family=Quicksand:wght@400;700&family=Roboto:wght@100;400&family=Rubik+Dirt&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Indie+Flower&family=Lobster&family=Lobster+Two&family=Maven+Pro:wght@400;500&family=Monoton&family=Quicksand:wght@400;700&family=Roboto:wght@100;400&family=Rubik+Dirt&display=swap");
 html {
-  padding: 2px; }
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow: hidden; }
 
 #bgBody {
   background-image: url("../img/fondoand.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  background-size: 100vh; }
 
 p {
   font-family: 'roboto';
@@ -30,13 +33,13 @@ nav {
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-around;
-  margin-top: 45px;
-  z-index: 2; }
+  z-index: 2;
+  margin-top: 35%; }
   nav img {
-    max-height: 40px; }
+    width: 45px; }
 
 .alturaDiv {
-  height: 94vh; }
+  height: 95%; }
   .alturaDiv img {
     max-height: 55px;
     padding-top: 30px; }
@@ -267,7 +270,7 @@ button {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
 #output {
-  font-family: "Exo";
+  font-family: "roboto";
   font-size: 2rem;
   height: 60px;
   font-weight: bold;
@@ -287,14 +290,15 @@ button {
   width: 280px;
   clear: both;
   text-align: center;
-  font-family: 'Exo'; }
+  font-family: 'roboto'; }
 
 .digit:active,
 .dig:active {
   background-color: #e6e6e6; }
 
 #call:hover {
-  background-color: #81c784; }
+  background-color: #3fafaf;
+  border-radius: 1.7rem; }
 
 .dig {
   float: left;
@@ -332,10 +336,11 @@ button {
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
+  padding-top: 50px;
   margin-right: auto;
   margin-left: 30px;
   margin-bottom: 15px; }
 
 .imgSize {
   width: 45px;
-  margin-left: 28%; }
+  margin-left: 30%; }
