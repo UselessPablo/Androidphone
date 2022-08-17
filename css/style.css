@@ -78,8 +78,7 @@ main img {
   display: flex;
   justify-content: space-evenly;
   overflow: hidden;
-  width: 90%;
-  margin-left: 5%; }
+  width: 90%; }
   .navButtons img {
     width: 22px; }
 
@@ -286,15 +285,6 @@ ol {
   font-weight: bold;
   color: #003f7eea; }
 
-#call {
-  display: inline-block;
-  background-color: #66bb6a;
-  padding: 4px 30px;
-  margin: 10px;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer; }
-
 .botrow {
   margin: 0 auto;
   width: 280px;
@@ -304,7 +294,10 @@ ol {
 
 .digit:active,
 .dig:active {
-  background-color: #e6e6e6; }
+  background-color: #36467986;
+border-radius: 0.5rem;
+padding: 6px;
+}
 
 #call:hover {
   background-color: #3fafaf;

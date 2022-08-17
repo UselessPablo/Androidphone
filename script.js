@@ -9,7 +9,3 @@ $(".digit").on('click', function() {
   }
 });
 
-$('.fa-long-arrow-left').on('click', function() {
-  $('#output span:last-child').remove();
-  count--;
-});
