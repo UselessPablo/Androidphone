@@ -85,7 +85,7 @@ main img {
   display: flex;
   justify-content: space-evenly;
   overflow: hidden;
-  width: 90%; }
+  width: 100%; }
   .navButtons img {
     width: 22px; }
 
@@ -93,7 +93,7 @@ main img {
   z-index: 3;
   position: fixed;
   bottom: 0;
-  width: 90%;
+  width: 100%;
   margin-bottom: 3px; }
 
 header {
@@ -532,7 +532,6 @@ button {
 .slider-checkbox {
   position: relative; }
   .slider-checkbox input {
-    margin: 0px;
     margin-top: 1px;
     cursor: pointer;
     opacity: 0;
@@ -546,26 +545,24 @@ button {
     height: 20px; }
     .slider-checkbox input:checked + .label:before {
       background-color: #61bbff;
-      content: "\f00c";
+      content: "";
       padding-left: 6px; }
     .slider-checkbox input:checked + .label:after {
       left: 21px; }
   .slider-checkbox .label {
     position: relative;
-    padding-left: 46px; }
+    padding-left: 46px;
+    margin-left: 10px; }
     .slider-checkbox .label:before, .slider-checkbox .label:after {
       position: absolute;
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
       border-radius: 10px;
-      transition: background-color 0.3s, left 0.3s;
-      font-family: 'roboto'; }
+      transition: background-color 0.3s, left 0.3s; }
     .slider-checkbox .label:before {
-      content: "\f00d";
-      color: #fff;
+      content: "";
+      color: #1a3f5e;
       box-sizing: border-box;
-      padding-left: 23px;
-      line-height: 0.1px;
       background-color: #888;
       left: 0px;
       top: 0px;
@@ -577,7 +574,7 @@ button {
     .slider-checkbox .label:after {
       content: "";
       letter-spacing: 20px;
-      background: #fff;
+      background: #1a3f5e;
       left: 1px;
       top: 1px;
       height: 18px;
@@ -586,7 +583,14 @@ button {
 .alturaDatos {
   height: 56vh; }
 
-label {
+section {
   font-family: 'roboto';
   font-size: 1rem;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-right: 150px;
+  text-align: start; }
+
+.contSlide {
+  display: flex;
+  justify-content: center;
+  width: 100%; }
