@@ -57,6 +57,13 @@ nav {
   width: 100%;
   height: 100vh; }
 
+main a {
+  font-family: 'roboto';
+  color: black;
+  cursor: pointer;
+  width: 100%;
+  height: 40px; }
+
 main tr {
   max-height: 20em; }
 
@@ -102,7 +109,7 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 90%;
+  width: 100%;
   padding-bottom: 10px;
   max-height: 1.6rem;
   margin-bottom: 20px;
@@ -426,7 +433,7 @@ button {
 .dropdown {
   overflow: hidden;
   width: 100%;
-  height: 50px;
+  height: 85px;
   display: inline-block; }
 
 .dropdown-content {
@@ -439,6 +446,8 @@ button {
   width: auto;
   padding: 12px 16px;
   position: absolute; }
+  .dropdown-content a {
+    color: black; }
   .dropdown-content img {
     margin-top: 60px;
     width: 40px; }
@@ -447,7 +456,8 @@ button {
 .dropdown-content {
   display: flex;
   width: 40px;
-  display: inline; }
+  display: inline;
+  color: black; }
 
 .dropdown .dropbtn {
   font-size: 16px;
@@ -518,3 +528,65 @@ button {
   background: #0c3b61;
   border-radius: 70%;
   cursor: pointer; }
+
+.slider-checkbox {
+  position: relative; }
+  .slider-checkbox input {
+    margin: 0px;
+    margin-top: 1px;
+    cursor: pointer;
+    opacity: 0;
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 20px; }
+    .slider-checkbox input:checked + .label:before {
+      background-color: #61bbff;
+      content: "\f00c";
+      padding-left: 6px; }
+    .slider-checkbox input:checked + .label:after {
+      left: 21px; }
+  .slider-checkbox .label {
+    position: relative;
+    padding-left: 46px; }
+    .slider-checkbox .label:before, .slider-checkbox .label:after {
+      position: absolute;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      transition: background-color 0.3s, left 0.3s;
+      font-family: 'roboto'; }
+    .slider-checkbox .label:before {
+      content: "\f00d";
+      color: #fff;
+      box-sizing: border-box;
+      padding-left: 23px;
+      line-height: 0.1px;
+      background-color: #888;
+      left: 0px;
+      top: 0px;
+      height: 20px;
+      width: 40px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px; }
+    .slider-checkbox .label:after {
+      content: "";
+      letter-spacing: 20px;
+      background: #fff;
+      left: 1px;
+      top: 1px;
+      height: 18px;
+      width: 18px; }
+
+.alturaDatos {
+  height: 56vh; }
+
+label {
+  font-family: 'roboto';
+  font-size: 1rem;
+  font-weight: bold; }
