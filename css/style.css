@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Indie+Flower&family=Lobster&family=Lobster+Two&family=Maven+Pro:wght@400;500&family=Quicksand:wght@400;700&family=Roboto:wght@100;400&family=Rubik+Dirt&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Indie+Flower&family=Lobster&family=Lobster+Two&family=Maven+Pro:wght@400;500&family=Monoton&family=Quicksand:wght@400;700&family=Roboto:wght@100;400&family=Rubik+Dirt&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden; }
@@ -599,12 +604,12 @@ section {
     border-style: solid; }
 
 .contSlide2 {
-  padding-bottom: 56px;
+  padding-bottom: 20px;
   display: flex;
   justify-content: start; }
   .contSlide2 a {
     color: black;
-    margin-top: 4px; }
+    margin-top: 10px; }
   .contSlide2 img {
     width: 20px;
     margin-left: 120px; }

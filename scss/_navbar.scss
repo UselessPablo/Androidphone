@@ -708,20 +708,23 @@ section {
     border-style: solid;
  }
 }
+
+
 .contSlide2{
-    padding-bottom: 56px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: start;
     
     a{
         color: black;
-        margin-top:4px;
+        margin-top:10px;
     }
     img{
         width: 20px;
         margin-left: 120px;
     }
 }
+
 #btnUnlock{
     
     background-color: transparent;
