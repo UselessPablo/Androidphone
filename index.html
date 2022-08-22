@@ -1,80 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>LookScreen</title>
 </head>
+
+<button id="btnUnlock" onclick="myFunc()">
 <body id="bgBody">
-    <div class="fastNav">
-        <div class="dropdown">
-            <button class="dropbtn">
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <div class="row2">
-                    <a href="./views/signal.html"><img src="./icons/signal3.png" alt="">Señal</a>
-                    <a href=""><img src="./icons/qr.png" alt="">Scan</a>
-                    <a href=""><img src="./icons/bluet.png" alt="">Bluetooth</a>
-                    <a href=""><img src="./icons/wifi3.png" alt="">Wifi</a>
-                </div>
-                <div class="row2">
-                    <a href=""><img src="./icons/orienta.png" alt="">Girar</a>
-                    <a href=""><img src="./icons/mudo.png" alt="">Silenciar</a>
-                    <a href=""><img src="./icons/cast.png" alt="">Emitir</a>
-                    <a href=""><img src="./icons/brillo.png" alt="">Brillo</a>
-
-                </div>
-                <div class="container2">
-                    <div class="brightness-box">
-                        <i class="far fa-sun"></i>
-                        <img src="../icons/brillo.png" alt=""> <input type="range" id="range" min="10" max="100"
-                            value="100">
-                        <i class="fas fa-sun"></i>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <header>
-        <div class="headerClock">
-        <p>22:36</p>
-    </div>
-        <img src="./icons/signal.png" alt="">
-        <img src="./icons/wifi.png" alt="">
-        <img src="./icons/battery.png" alt="">
-       </header>
-
-  <div class="alturaGen">  
-    <div class="relojDiv">
+  
+    <div class="alturaGen">  
+    <div class="relojDiv2">
     <a href="https://weather.com/es-AR/tiempo/hoy/l/-41.18,-71.37?par=google"><img src="./icons/nieve.png
         " alt="Logo clima"></a>
     <a href=""><p>22:36</p></a>
 </div>
 </div>
-<div class="googleW">
-<a href="https://www.google.com/">
- <img src="./icons/google.png" alt="">
-</a>
-</div>
-<div class="apps">
-<a href="https://play.google.com/store/apps?hl=es_AR&gl=US"><img src="./icons/store.png" alt=""></a>
-<a href="https://www.gmail.com"><img src="./icons/gmail.png" alt=""></a>
+  
+<div class="swipeTo">
+
+  <p class="heartbeat">Toca para desbloquear</p>
 </div>
 
-<div id="navMenu container-fluid">
-<nav>
-    <a href="./views/settings.html"><img src="./icons/settings.png" alt="configuración"></a>
-    <a href="./views/galeria.html"><img src="./icons/galery.png" alt="galería"></a>
-    <a href="./views/contacts.html"><img src="./icons/contacts.png" alt="contactos"></a>
-    <a href="https://www.chrome.com"><img src="./icons/chrome.png" alt="cámara de fotos"></a>
-    <a href="./views/telefono.html"><img src="./icons/phone.png" alt="llamar por teléfono"></a>
-</nav>
 
-</div>
-
+<script src="./looks.js"></script>
 </body>
+</button>
 </html>

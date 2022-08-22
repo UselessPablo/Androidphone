@@ -632,6 +632,7 @@ section {
   margin-top: 180px;
   width: 90%; }
   .swipeTo p {
+    margin-left: 18px;
     font-size: 1.4rem;
     font-family: 'maven pro';
     color: black;
