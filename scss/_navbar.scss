@@ -723,13 +723,16 @@ section {
     }
 }
 #btnUnlock{
+    
     background-color: transparent;
     border-style: none;
-    height: 70vh;
-    margin: 65px;
+    min-height: 100vh;
+    width: 45vw;
+    align-items: center;
     button{
     margin: 5px;
- }
+    
+}
 }
 .relojDiv2{
     display: inline-block;
@@ -748,7 +751,6 @@ section {
 }
 .swipeTo{
     margin-top: 180px;
-   
     width: 90%;
     p{
         margin-left:18px;

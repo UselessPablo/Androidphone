@@ -612,8 +612,9 @@ section {
 #btnUnlock {
   background-color: transparent;
   border-style: none;
-  height: 70vh;
-  margin: 65px; }
+  min-height: 100vh;
+  width: 45vw;
+  align-items: center; }
   #btnUnlock button {
     margin: 5px; }
 
