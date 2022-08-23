@@ -727,3 +727,21 @@ section {
     transform: scale(1);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out; } }
+
+.contactos {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 80px;
+  border-radius: 1.6rem;
+  background-color: #7bade085;
+  margin-bottom: 60px;
+  align-items: center; }
+
+.sticky2 {
+  z-index: 3;
+  position: fixed;
+  bottom: 40px;
+  margin-left: 10%; }
+  .sticky2 img {
+    width: 40px; }
