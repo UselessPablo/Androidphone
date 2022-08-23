@@ -1,3 +1,11 @@
+#navMenu{
+    height: 190px;
+    display: grid;
+    align-items: flex-end;
+    bottom: 10px;
+    position: absolute;
+    width: 100%;
+}
 nav {
     padding-right: 3px;
     padding-left: 3px;
@@ -6,7 +14,9 @@ nav {
     align-items: center;
     justify-content: space-around;
     z-index: 2;
-    margin-top: 35%;
+    position: absolute;
+    width: 100%;
+    
 
     img {
         width: 45px;
@@ -15,7 +25,7 @@ nav {
 }
 
 .alturaDiv {
-    height: 100vh;
+    height: 95vh;
 
     img {
         max-height: 55px;
@@ -252,7 +262,7 @@ ol {
 }
 .apps {
         width: 100%;
-    margin-top: 20px;
+    margin-top: 100px;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
