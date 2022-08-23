@@ -10,6 +10,7 @@
 </head>
 
 <body>
+   <div class="brilloDoc">
     <div class="fastNav">
         <div class="dropdown">
             <button class="dropbtn">
@@ -91,14 +92,9 @@
         <a href="../index2.html"><img src="../icons/square.png" alt=""></a>
         <a href="javascript:history.back()"><img src="../icons/back.png" alt=""></a>
     </div>
-    <script>
-        rangeInput = document.getElementById('range');
-        container = document.getElementsByClassName('container')[0];
 
-        rangeInput.addEventListener("change", function () {
-            container.style.filter = "brightness(" + rangeInput.value + "%)";
-        });
-    </script>
+<script src="../brillo.js"></script>
+</div> 
 </body>
 
 </html>
