@@ -158,6 +158,7 @@ header {
   height: 50%; }
 
 input {
+  height: 30px;
   width: 95%;
   border-style: solid;
   border-width: 1px;
@@ -753,12 +754,10 @@ input[type=text], input[type=password] {
   border: none;
   background: #f1f1f1; }
 
-/* Add a background color when the inputs get focus */
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none; }
 
-/* Set a style for all buttons */
 button {
   border-style: none;
   background-color: transparent;
@@ -782,10 +781,10 @@ button:hover {
   height: 100%;
   background-color: transparent;
   backdrop-filter: blur(3px);
-  margin-bottom: 100px; }
+  margin-bottom: 200px; }
 
 .modal-content {
-  background-color: #5cf34ea4;
+  background-color: #87afb9a4;
   margin: 5% auto 15% auto;
   /* 5% from the top, 15% from the bottom and centered */
   width: 50%;
@@ -812,8 +811,3 @@ button:hover {
 .close:focus {
   color: #f44336;
   cursor: pointer; }
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-    width: 100%; } }
