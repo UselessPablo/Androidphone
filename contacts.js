@@ -16,12 +16,18 @@ function createContact() {
     let cor = prompt('Correo del Contacto');
     let col = prompt('Elige un color de Contacto')
     let contact = scheduled.push(nom, ape, num, cor, col);
-    scheduled.push(contact);
-    alert('El Contacto ' + scheduled.join(" \n ") + 'se a guardado Correctamente\n');
+    
+    alert('El Contacto ' + scheduled.join(" - ") + 'se a guardado Correctamente\n');
 
+const contacts ={
+    nombre: nom,
+    apellido: ape,
+    numero: num,
+    correo:cor,
+    color:col,   
 }
-
-
+    scheduled.push(contacts);
+}
 
 function getContact() {
     console.table(scheduled);
@@ -51,8 +57,9 @@ function form() {
 form();
 
 function buscar() {
-    let color = scheduled.find(element => element == this.color);
-    console.log(color);
+ 
+    let find = prompt('Buscar el contacto por color')+scheduled.find(element => element !== 'color' + 'name' + 'telefono')
+    alert(find);
 }
 buscar();
 // agenda = scheduled.find(nombre => nombre === scheduled[i-1]);
