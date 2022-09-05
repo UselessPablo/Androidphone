@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\scss"
+    "\\scss",
+    "\\views"
   ],
-  "SelectedNode": "\\scss\\_navbar.scss",
+  "SelectedNode": "\\telefono.js",
   "PreviewInSolutionExplorer": false
 }
