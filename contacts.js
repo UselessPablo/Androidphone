@@ -1,42 +1,40 @@
 
 
-const scheduled = [];
+var contactList = [];
 
-function inputContacto(nombre, apellido, numero, correo, color) {
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.numero = numero;
-    this.correo = correo;
-    this.color = color;
-};
 function createContact() {
     let nom = prompt('Nombre del Contacto');
     let ape = prompt('Apellido del contacto');
     let num = Number(prompt('Teléfono del Contacto'));
     let cor = prompt('Correo del Contacto');
     let col = prompt('Elige un color de Contacto')
-    let contact = scheduled.push(nom, ape, num, cor, col);
-    
-    alert('El Contacto ' + scheduled.join(" - ") + 'se a guardado Correctamente\n');
 
-const contacts ={
-    nombre: nom,
-    apellido: ape,
-    numero: num,
-    correo:cor,
-    color:col,   
-}
-    scheduled.push(contacts);
+
+    const contact = {
+        nombre: nom,
+        apellido: ape,
+        numero: num,
+        correo: cor,
+        color: col,
+    }
+    contactList.push(contact);
+    alert(contact.nombre + " " + contact.numero + " " + contact.color + '   |*   Guardado   *|   ');
+    //console.log(contactList);
 }
 
 function getContact() {
-    console.table(scheduled);
+    console.table(contactList);
+    let filter = prompt('Buscar contacto por color');
+    let resultado = buscarPorColor(filter);
+    var i = 0;
+    for (i = 0; i < resultado.length; i++) {
+        alert("Nombre: " + resultado[i].nombre + '\n' + 'Teléfono: ' + resultado[i].numero);
+    }
 }
-
 let options;
 function form() {
     while (options !== 0) {
-        options = Number(prompt('Ingresa una opción:\n1. Crear contacto nuevo\n2. Ver contactos\n0. Salir'));
+        options = Number(prompt('Ingresa una opción:\n1. Crear contacto nuevo\n2. Buscar contacto\n0. Salir'));
         switch (options) {
             case 1:
                 createContact();
@@ -51,21 +49,12 @@ function form() {
                 alert('Opción incorrecta');
                 break;
         }
-
     }
 }
 form();
 
-function buscar() {
- 
-    let find = prompt('Buscar el contacto por color')+scheduled.find(element => element !== 'color' + 'name' + 'telefono')
-    alert(find);
+function buscarPorColor(color) {
+    let resultado = contactList.filter(x => x.color === color);
+    console.log(resultado);
+    return resultado;
 }
-buscar();
-// agenda = scheduled.find(nombre => nombre === scheduled[i-1]);
-// //  return (agenda);
-// // }
-
-
-// buscarContacto = agenda.find(nombre => nombre == buscarContacto);
-// alert(buscarContacto);
