@@ -58,3 +58,12 @@ function buscarPorColor(color) {
     console.log(resultado);
     return resultado;
 }
+
+const createContacts = document.getElementById('change');
+for (let resultado of contactList){
+    console.log(resultado);
+    const item = document.createElement('li');
+    item.innerHTML = ` ${resultado.nombre +" "+ resultado.apellido }`;
+                          
+createContacts.append(item);           
+}
