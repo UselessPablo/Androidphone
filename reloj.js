@@ -52,23 +52,21 @@ setInterval(startTime2, 1000);
 
 ///Termina el  reloj en vivo
 
-let search = document.getElementById('search'); 
+let search = document.getElementById('search');
 let text = document.getElementById('texto');
 
-search.addEventListener('mouseout', mouseOut );
-search.addEventListener('mouseover',  mouseOver);
+search.addEventListener('mouseout', mouseOut);
+search.addEventListener('mouseover', mouseOver);
 
-function mouseOut()
-{
+function mouseOut() {
     text.classList.add('small');
     search.style.background = 'white';
-    search.style.fontFamily ='roboto';
-    search.style.paddingLeft =' 25px';
-    
-    
+    search.style.fontFamily = 'roboto';
+    search.style.paddingLeft = ' 25px';
+
+
 }
-function mouseOver()
-{
+function mouseOver() {
     text.classList.add('big');
     search.innerHTML = "Buscar en Google";
     search.style.background = 'grey';
@@ -82,31 +80,26 @@ let imagen2 = false;
 
 
 
-function updateWalpaper(){
-wallpapers.onclick = 
-function changeWallpaper() {
- if (imagen1==true){
-        document.body.style.backgroundImage = "url('./img/retro.webp')";
- imagen1=false;
-    imagen2=true;
-}
-else if
-    (imagen2==true){
-changeWallpaper1();
-    imagen2=false;
-}
-else 
-document.body.style.backgroundImage = "url('./img/fondoand.png')";
+function updateWalpaper() {
+    wallpapers.onclick =
+        function changeWallpaper() {
+            if (imagen1 == true) {
+                document.body.style.backgroundImage = "url('./img/retro.webp')";
+                imagen1 = false;
+                imagen2 = true;
+            }
+            else if
+                (imagen2 == true) {
+                changeWallpaper1();
+                imagen2 = false;
+            }
+            else
+                document.body.style.backgroundImage = "url('./img/fondoand.png')";
 
-}
-function changeWallpaper1(){
-    document.body.style.backgroundImage ="url('./img/montaña.jpg')"
-}
-   
-    do {
-        updateWalpaper;
-
-    } while (wallpapers.onclick == false);
+        }
+    function changeWallpaper1() {
+        document.body.style.backgroundImage = "url('./img/montaña.jpg')"
+    }
 
 }
 updateWalpaper();
