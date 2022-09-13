@@ -14,6 +14,9 @@ html {
   background-size: cover;
   height: 100vh; }
 
+.wallpaper {
+  background-image: url("../img/"); }
+
 p {
   font-family: 'roboto';
   text-align: center;
@@ -33,7 +36,7 @@ h1 {
   width: 98vw; }
 
 #navMenu {
-  height: 190px;
+  height: 100px;
   display: grid;
   align-items: flex-end;
   bottom: 10px;
@@ -72,6 +75,11 @@ nav {
 .borderTable {
   width: 100%;
   height: 100vh; }
+
+.small {
+  font-size: 0.8rem; }
+  .small .big {
+    font-size: 1.4rem; }
 
 main a {
   font-family: 'roboto';
@@ -130,7 +138,7 @@ header {
   max-height: 1.6rem;
   margin-bottom: 20px;
   position: relative; }
-  .headerClock p {
+  .headerClock span {
     color: black;
     font-family: 'roboto';
     font-size: 1em;
@@ -156,6 +164,11 @@ header {
 
 .alturaGen {
   height: 50%; }
+  .alturaGen span {
+    font-size: 2.6em;
+    font-family: 'maven pro';
+    display: grid;
+    justify-content: center; }
 
 input {
   height: 30px;
@@ -234,17 +247,19 @@ ol {
 
 .apps {
   width: 100%;
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center; }
-  .apps a img {
+  .apps img {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 40px; }
+    width: 45px; }
+  .apps button {
+    cursor: pointer; }
 
 .div {
   display: flex; }

@@ -61,12 +61,13 @@ function buscarPorColor(color) {
 
 const createContacts = document.getElementById('change');
 for (let resultado of contactList) {
-    console.log(resultado);
     const indice = document.createElement('p');
     indice.innerHTML = `${resultado.nombre.charAt(0)}`;
     const item = document.createElement('li');
     item.innerHTML = ` ${resultado.nombre + " " + resultado.apellido}`;
-
     createContacts.append(indice,item);
     
 }
+
+let form = document.getElementById('id01');
+let btn = document.getElementById('addContact');

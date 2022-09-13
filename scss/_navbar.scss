@@ -3,7 +3,7 @@
     width: 98vw;
 }
 #navMenu{
-    height: 190px;
+    height: 100px;
     display: grid;
     align-items: flex-end;
     bottom: 10px;
@@ -41,7 +41,7 @@ nav {
     display: flex;
     justify-content: center;
 
-    p {
+    p{
         color: black;
         font-weight: bold;
     }
@@ -57,7 +57,12 @@ nav {
     height: 100vh;
 
 }
-
+.small {
+    font-size: 0.8rem;
+.big{
+    font-size: 1.4rem;
+}
+}
 main {
     a{ 
         font-family: 'roboto';
@@ -128,7 +133,7 @@ header {
     margin-bottom: 20px;
     position: relative;
 
-    p {
+    span {
         color: black;
         font-family: 'roboto';
         font-size: 1em;
@@ -161,6 +166,12 @@ header {
 
 .alturaGen {
     height: 50%;
+span{
+    font-size: 2.6em;
+    font-family: 'maven pro';
+    display: grid;
+    justify-content: center;
+}
 }
 
 input {
@@ -266,19 +277,21 @@ ol {
 }
 .apps {
         width: 100%;
-    margin-top: 100px;
+    margin-top: 50px;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        a{
+        
     img {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        width: 40px;
+        width: 45px;
         }
+    button{
+        cursor: pointer;
     }
 }
 .div{

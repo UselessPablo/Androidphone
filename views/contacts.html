@@ -42,7 +42,10 @@
     </div>
     <header>
         <div class="headerClock">
-        <p>22:36</p>
+        <span id="hours" class="hours"></span> :
+<span id="minutes" class="minutes"></span> :
+<span id="seconds" class="seconds"></span>
+
     </div>
         <img src="../icons/signal.png" alt="">
         <img src="../icons/wifi.png" alt="">
@@ -57,7 +60,7 @@
     </div>
     
     <div id="id01" class="modal">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+        <span id="addContact"onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
         <form class="modal-content" action="/action_page.php">
           <div class="container3">
         
@@ -73,8 +76,8 @@
             <label for="email"><b>Email</b></label>
             <input type="text" placeholder="mail del contacto" >
             <div class="clearfix">
-              <button type="button" onclick="document.getElementById('id01').style.display='none'"><img src="../icons/cancelar.png" alt=""></button>
-              <button type="submit" ><img src="../icons/ok.png" alt=""></button>
+              <button id="off" type="button"><img src="../icons/cancelar.png" alt=""></button>
+              <button id="on" type="submit" ><img src="../icons/ok.png" alt=""></button>
             </div>
           </div>
         </form>
@@ -93,6 +96,8 @@
         <a href="javascript:history.back()"><img src="../icons/back.png" alt=""></a>
     </div>
 </div>
+<script src="../reloj.js"></script>
+
 <script src="../contacts.js"></script>
 <script src="../brillo.js"></script>
 </body>
