@@ -20,10 +20,10 @@ btn.onclick = () => {
         telefono: telefono,
         correo: correo,
     }
-    localStorage.setItem(contacto, JSON.stringify(contacto));
+    localStorage.setItem(contacto.id, JSON.stringify(contacto));
     printed();
     cerrarContact();
-
+    console.log(contacto);
     contactoNuevo(contacto);
 
 }
