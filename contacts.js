@@ -19,6 +19,7 @@ btn.onclick = () => {
         apellido: apellido,
         telefono: telefono,
         correo: correo,
+      
     }
     localStorage.setItem(contacto.id, JSON.stringify(contacto));
     printed();
@@ -27,6 +28,7 @@ btn.onclick = () => {
     contactoNuevo(contacto);
 
 }
+
 function printed() {
 
     let data = localStorage.getItem('contacto');
@@ -61,19 +63,22 @@ function mostrarContactos(contactos) {
 }
 function openModal() {
     const modalContent = document.getElementById('modalContacts');
-    modalContent.style.display = ('block')
+    modalContent.style.display = ('block');
 }
 
 
 function contactoNuevo(contacto) {
 
     const node = document.createElement("li");
-    const textnode = document.createTextNode(contacto.nombre + " " + contacto.apellido + '\n' + contacto.telefono + '\n' + contacto.correo);
+    const textnode = document.createTextNode(contacto.nombre + " " + contacto.apellido + '\n' + contacto.telefono + '\n' + contacto.correo );
     node.appendChild(textnode);
     document.getElementById("lista").appendChild(node);
     const randomColor = Math.floor(Math.random() * 16777215).toString(16);
     node.style.backgroundColor = "#" + randomColor;
+    
 }
-
-
-
+let randomColor = randomColor1();
+function randomColor1() {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    return randomColor;
+}
