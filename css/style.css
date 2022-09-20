@@ -230,20 +230,27 @@ input {
   max-width: 80%; }
 
 .ulDiv {
-  display: list-item; }
+  display: flex;
+  flex-direction: column; }
 
 ol {
   height: 90vh;
-  font-family: 'maven pro'; }
+  padding-top: 20px;
+  font-family: 'maven pro';
+  font-weight: bold; }
   ol p {
     border-radius: 2rem;
-    width: 40px;
+    width: 60%;
+    margin-left: 20%;
     padding-bottom: 5px;
-    background-color: green; }
+    background-color: #30b830; }
   ol li {
+    margin-top: 5px;
     list-style: none;
     display: list-item;
-    text-align: left; }
+    text-align: left;
+    padding-top: 3px;
+    padding-bottom: 3px; }
 
 .apps {
   width: 100%;
@@ -812,3 +819,6 @@ button:hover {
 .close:focus {
   color: #f44336;
   cursor: pointer; }
+
+.hide {
+  display: none; }

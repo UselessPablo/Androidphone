@@ -1,73 +1,79 @@
 
-
-var contactList = [];
-
-function createContact() {
-    let nom = prompt('Nombre del Contacto');
-    let ape = prompt('Apellido del contacto');
-    let num = Number(prompt('Teléfono del Contacto'));
-    let cor = prompt('Correo del Contacto');
-    let col = prompt('Elige un color de Contacto')
+let contactos = allStorage();
+mostrarContactos(contactos);
 
 
-    const contact = {
-        nombre: nom,
-        apellido: ape,
-        numero: num,
-        correo: cor,
-        color: col,
+const btn = document.getElementById('on')
+
+btn.onclick = () => {
+
+    const nombre = document.getElementById('nombre').value;
+    const apellido = document.getElementById('apellido').value;
+    const telefono = document.getElementById('telefono').value;
+    const correo = document.getElementById('email').value;
+
+    let contacto = {
+
+        id: Math.random(1, 100),
+        nombre: nombre,
+        apellido: apellido,
+        telefono: telefono,
+        correo: correo,
     }
-    contactList.push(contact);
-    alert(contact.nombre + " " + contact.numero + " " + contact.color + '   |*   Guardado   *|   ');
-    //console.log(contactList);
-}
+    localStorage.setItem(contacto, JSON.stringify(contacto));
+    printed();
+    cerrarContact();
 
-function getContact() {
-    console.table(contactList);
-    let filter = prompt('Buscar contacto por color');
-    let resultado = buscarPorColor(filter);
-    var i = 0;
-    for (i = 0; i < resultado.length; i++) {
-        alert("Nombre: " + resultado[i].nombre + '\n' + 'Teléfono: ' + resultado[i].numero);
+    contactoNuevo(contacto);
+
+}
+function printed() {
+
+    let data = localStorage.getItem('contacto');
+    let devolucionDeContacto = JSON.parse(data);
+}
+function cerrarContact() {
+    const modalContacts = document.getElementById('modalContacts');
+    const btnCancel = document.getElementById('off');
+    modalContacts.style.display = "none";
+    resetForm();
+}
+function resetForm() {
+    document.getElementById("formulario").reset();
+}
+function allStorage() {
+    var contactos = [],
+        keys = Object.keys(localStorage),
+        i = keys.length;
+    while (i--) {
+        contactos.push(JSON.parse(localStorage.getItem(keys[i])));
     }
-}
-let options;
-function form() {
-    while (options !== 0) {
-        options = Number(prompt('Ingresa una opción:\n1. Crear contacto nuevo\n2. Buscar contacto\n0. Salir'));
-        switch (options) {
-            case 1:
-                createContact();
-                break;
-            case 2:
-                getContact();
-                break;
-            case 0:
-                alert('Hecho');
-                break;
-            default:
-                alert('Opción incorrecta');
-                break;
-        }
-    }
-}
-form();
-
-function buscarPorColor(color) {
-    let resultado = contactList.filter(x => x.color === color);
-    console.log(resultado);
-    return resultado;
+    return contactos;
 }
 
-const createContacts = document.getElementById('change');
-for (let resultado of contactList) {
-    const indice = document.createElement('p');
-    indice.innerHTML = `${resultado.nombre.charAt(0)}`;
-    const item = document.createElement('li');
-    item.innerHTML = ` ${resultado.nombre + " " + resultado.apellido}`;
-    createContacts.append(indice,item);
-    
+function mostrarContactos(contactos) {
+    contactos.forEach(contacto => {
+        const node = document.createElement("li");
+        const textnode = document.createTextNode(contacto.nombre + " " + contacto.apellido + '\n' + contacto.telefono + '\n' + contacto.correo);
+        node.appendChild(textnode);
+        document.getElementById("lista").appendChild(node);
+    });
+}
+function openModal() {
+    const modalContent = document.getElementById('modalContacts');
+    modalContent.style.display = ('block')
 }
 
-let form = document.getElementById('id01');
-let btn = document.getElementById('addContact');
+
+function contactoNuevo(contacto) {
+
+    const node = document.createElement("li");
+    const textnode = document.createTextNode(contacto.nombre + " " + contacto.apellido + '\n' + contacto.telefono + '\n' + contacto.correo);
+    node.appendChild(textnode);
+    document.getElementById("lista").appendChild(node);
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    node.style.backgroundColor = "#" + randomColor;
+}
+
+
+

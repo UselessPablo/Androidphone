@@ -1,104 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Contacts</title>
 </head>
+
 <body>
     <div class="brilloDoc">
-    <div class="fastNav">
-        <div class="dropdown">
-            <button class="dropbtn">
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <div class="row2">
-                    <a href=""><img src="../icons/signal3.png" alt="">Señal</a>
-                    <a href=""><img src="../icons/qr.png" alt="">Scan</a>
-                    <a href=""><img src="../icons/bluet.png" alt="">Bluetooth</a>
-                    <a href=""><img src="../icons/wifi3.png" alt="">Wifi</a>
-                </div>
-                <div class="row2">
-                    <a href=""><img src="../icons/orienta.png" alt="">Girar</a>
-                    <a href=""><img src="../icons/mudo.png" alt="">Silenciar</a>
-                    <a href=""><img src="../icons/cast.png" alt="">Emitir</a>
-                    <a href=""><img src="../icons/brillo.png" alt="">Brillo</a>
-
-                </div>
-                <div class="container2">
-                    <div class="brightness-box">
-                        <i class="far fa-sun"></i>
-                        <img src="../icons/brillo.png" alt=""> <input type="range" id="range" min="10" max="100"
-                            value="100">
-                        <i class="fas fa-sun"></i>
+        <div class="fastNav">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="row2">
+                        <a href=""><img src="../icons/signal3.png" alt="" />Señal</a>
+                        <a href=""><img src="../icons/qr.png" alt="" />Scan</a>
+                        <a href=""><img src="../icons/bluet.png" alt="" />Bluetooth</a>
+                        <a href=""><img src="../icons/wifi3.png" alt="" />Wifi</a>
+                    </div>
+                    <div class="row2">
+                        <a href=""><img src="../icons/orienta.png" alt="" />Girar</a>
+                        <a href=""><img src="../icons/mudo.png" alt="" />Silenciar</a>
+                        <a href=""><img src="../icons/cast.png" alt="" />Emitir</a>
+                        <a href=""><img src="../icons/brillo.png" alt="" />Brillo</a>
+                    </div>
+                    <div class="container2">
+                        <div class="brightness-box">
+                            <i class="far fa-sun"></i>
+                            <img src="../icons/brillo.png" alt="" />
+                            <input type="range" id="range" min="10" max="100" value="100" />
+                            <i class="fas fa-sun"></i>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <header>
+            <div class="headerClock">
+                <span id="hours" class="hours"></span> :
+                <span id="minutes" class="minutes"></span> :
+                <span id="seconds" class="seconds"></span>
+            </div>
+            <img src="../icons/signal.png" alt="" />
+            <img src="../icons/wifi.png" alt="" />
+            <img src="../icons/battery.png" alt="" />
+        </header>
+        <div>
+            <input id="borrarContacto" type="text" placeholder="Search Contact" name="search" />
+            <ol id="lista" class="ulDiv">
+                <p id="someText">Contactos</p>
+            </ol>
+        </div>
 
+        <div id="modalContacts" class="modal">
+            <form name="formulario" id="formulario" class="modal-content">
+                <div class="container3">
+                    <label for="nombre"><b>Nombre</b></label>
+                    <input id="nombre" type="text" placeholder="nombre de contacto" />
+
+                    <label for="apellido"><b>Apellido</b></label>
+                    <input id="apellido" type="text" placeholder="apellido" />
+
+                    <label for="telefono"><b>Teléfono</b></label>
+                    <input id="telefono" type="text" placeholder="teléfono..." />
+
+                    <label for="correo"><b>Email</b></label>
+                    <input id="email" type="text" placeholder="mail del contacto" />
+
+                    <div class="clearfix">
+                        <button id="off" onclick="cerrarContact()" type="button">
+                            <img src="../icons/cancelar.png" alt="" />
+                        </button>
+                        <button id="on" type="button">
+                            <img src="../icons/ok.png" alt="" />
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="contactos sticky2">
+            <div class="navButtons">
+                <button id="openModal" onclick="openModal()">
+                    <img src="../icons/agregar.png" alt="" />
+                </button>
+                <a href="javascript:history.back()"><img src="../icons/favorito.png" alt="" /></a>
+            </div>
+        </div>
+
+        <div class="navButtons sticky">
+            <a href=""><img src="../icons/circle.png" alt="" /></a>
+            <a href="../index2.html"><img src="../icons/square.png" alt="" /></a>
+            <a href="javascript:history.back()"><img src="../icons/back.png" alt="" /></a>
         </div>
     </div>
-    <header>
-        <div class="headerClock">
-        <span id="hours" class="hours"></span> :
-<span id="minutes" class="minutes"></span> :
-<span id="seconds" class="seconds"></span>
-
-    </div>
-        <img src="../icons/signal.png" alt="">
-        <img src="../icons/wifi.png" alt="">
-        <img src="../icons/battery.png" alt="">
-       </header>
-       <div>
-        <input type="text" placeholder="Search Contact" name="search" >
-        <ol id="change" class="ulDiv">
-            
-      
-</ol>
-    </div>
-    
-    <div id="id01" class="modal">
-        <span id="addContact"onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
-        <form class="modal-content" action="/action_page.php">
-          <div class="container3">
-        
-            <label for="email"><b>Nombre</b></label>
-            <input type="text" placeholder="nombre de contacto" >
-      
-            <label for="email"><b>Apellido</b></label>
-            <input type="text" placeholder="apellido" >
-      
-            <label for="email"><b>Teléfono</b></label>
-            <input type="text" placeholder="teléfono..." >
-            
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="mail del contacto" >
-            <div class="clearfix">
-              <button id="off" type="button"><img src="../icons/cancelar.png" alt=""></button>
-              <button id="on" type="submit" ><img src="../icons/ok.png" alt=""></button>
-            </div>
-          </div>
-        </form>
-      </div>
-    
-    <div class="contactos sticky2" >
-    <div class="navButtons">
-        <button onclick="document.getElementById('id01').style.display='block'"><img src="../icons/agregar.png" alt=""></button> 
-               <a href="javascript:history.back()"><img src="../icons/favorito.png" alt=""></a>
-    </div>
-</div>
-
-       <div class="navButtons sticky">
-        <a href=""><img src="../icons/circle.png" alt=""></a>
-        <a href="../index2.html"><img src="../icons/square.png" alt=""></a>
-        <a href="javascript:history.back()"><img src="../icons/back.png" alt=""></a>
-    </div>
-</div>
-<script src="../reloj.js"></script>
-
-<script src="../contacts.js"></script>
-<script src="../brillo.js"></script>
+    <script src="../reloj.js"></script>
+    <script src="../contacts.js"></script>
 </body>
+
 </html>
