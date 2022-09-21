@@ -2,6 +2,7 @@
 
 
 
+
 let contactos = allStorage();
 mostrarContactos(contactos);
 const btn = document.getElementById('on')
@@ -26,6 +27,7 @@ btn.onclick = () => {
     printed();
     cerrarContact();
     contactoNuevo(contacto);
+    openPopUp();
 }
 
 function printed() {
@@ -47,12 +49,10 @@ function resetForm() {
 
 function allStorage() {
     var contactos = [],
-    
     keys = Object.keys(localStorage),
         i = keys.length;
     while (i--){
-        contactos.push(JSON.parse(localStorage.getItem(keys[i])));
-        
+        contactos.push(JSON.parse(localStorage.getItem(keys[i])));  
     }
     contactos = contactos.sort((a, b) => {
         if (a.nombre < b.nombre) {
@@ -68,8 +68,7 @@ function mostrarContactos(contactos) {
         const textnode = document.createTextNode(contacto.nombre + " " + contacto.apellido + '\n' + contacto.telefono + '\n' + contacto.correo );
         node.appendChild(textnode);
      let color = (contacto.color);
-        node.style.backgroundColor = "#" + color;
-    console.log(color);
+        node.style.backgroundColor = `#${color}`;
         document.getElementById("lista").appendChild(node);
     });
 }
@@ -86,5 +85,14 @@ function contactoNuevo(contacto) {
     document.getElementById("lista").appendChild(node);
     const randomColor = Math.floor(Math.random() * 16777215).toString(16);
     node.style.backgroundColor = "#" + randomColor ;
-   // localStorage.setItem('colores',JSON.stringify(randomColor));
+    
 }
+function openPopUp(){
+    let popUp = document.getElementById('mensajePop');
+    popUp.classList.add('openPopUp');
+}
+function closePopup() {
+    let popUp = document.getElementById('mensajePop');
+    popUp.classList.remove('openPopUp');
+}   
+
