@@ -237,7 +237,8 @@ ol {
   height: 90vh;
   padding-top: 20px;
   font-family: 'maven pro';
-  font-weight: bold; }
+  font-weight: bold;
+  margin-left: 40px; }
   ol p {
     border-radius: 2rem;
     width: 60%;
@@ -248,9 +249,11 @@ ol {
     margin-top: 5px;
     list-style: none;
     display: list-item;
-    text-align: left;
-    padding-top: 3px;
-    padding-bottom: 3px; }
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 0.5rem;
+    width: 250px;
+    padding-left: 5px; }
 
 .apps {
   width: 100%;
