@@ -54,20 +54,23 @@
             <img src="../icons/signal.png" alt="" />
             <img src="../icons/wifi.png" alt="" />
             <img src="../icons/battery.png" alt="" />
-        </header>
-        <div>
+        </header>      
+    <div>
             <input id="buscarContacto" type="text" placeholder="Search Contact" name="search" />
             
-            <ol id="lista" class="ulDiv">
-                <p id="someText">Contactos</p>
-            </ol>
+
+            <button id="lista" class="ulDiv">
+             
+            </button>
         </div>
+
 
         <div id="modalContacts" class="modal">
             <form name="formulario" id="formulario" class="modal-content">
                 <div class="container3">
                     <label for="nombre"><b>Nombre</b></label>
                     <input id="nombre" type="text" placeholder="nombre de contacto" />
+
 
                     <label for="apellido"><b>Apellido</b></label>
                     <input id="apellido" type="text" placeholder="apellido" />
@@ -82,6 +85,7 @@
                         <button id="off" onclick="cerrarContact()" type="button">
                             <img src="../icons/cancelar.png" alt="" />
                         </button>
+
                         <button id="on" type="button" onclick="openPopUp()">
                             <img src="../icons/ok.png" alt="" />
                         </button>
@@ -90,12 +94,23 @@
             </form>
         </div>
 
+        <div id="modalContent" class="modal">
+    <div class="conitainer4">
+       <form id="borrarForm" class="modal-content2">
+        <label for="nombre">Borrar contacto</label>
+        <input id="eliminar" type="text" borrar..>
+        <button id="borrado" onclick="eliminarContacto()">Borrar</button>
+    </form>
+    </div>
+</div>
         <div class="contactos sticky2">
             <div class="navButtons">
                 <button id="openModal" onclick="openModal()">
                     <img src="../icons/agregar.png" alt="" />
                 </button>
-                <a href="javascript:history.back()"><img src="../icons/favorito.png" alt="" /></a>
+            <button  id="borrar" onclick="openModal2()">
+                 <img src="../icons/favorito.png" alt="" />
+                </button>
             </div>
         </div>
 
@@ -105,6 +120,12 @@
             <a href="javascript:history.back()"><img src="../icons/back.png" alt="" /></a>
         </div>
     </div>
+    
+   
+   
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="../reloj.js"></script>
     <script src="../contacts.js"></script>
 </body>
