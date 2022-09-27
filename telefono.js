@@ -1,6 +1,6 @@
-let contactos = allStorage();
+// let contactos = allStorage();
 
-mostrarContactos(contactos);
+mostrarContacto();
 
 function allStorage() {
   var contactos = [],
@@ -12,12 +12,16 @@ function allStorage() {
   return contactos;
 }
 
-function mostrarContactos(contactos) {
-    contactos.forEach(contacto => {
-      console.log(contacto.telefono);
-      let node = document.getElementById('output');
-      const textnode = document.createTextNode(contacto.telefono);
-      node.appendChild(textnode);
-    });
-  
+function mostrarContacto() {
+
+  let contactoSeleccionado = localStorage.getItem('contactoSeleccionado');
+  let contacto = localStorage.getItem(contactoSeleccionado);
+
+  let devolucionDeContacto = JSON.parse(contacto);
+
+  let node = document.getElementById('output');
+  const textnode = document.createTextNode(devolucionDeContacto.telefono);
+  node.appendChild(textnode);
+
+
 }
