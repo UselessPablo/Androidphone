@@ -46,6 +46,7 @@
 <span id="seconds" class="seconds"></span>
 
         </div>
+        <img id="noSignal" class="hide" src="../icons/no-signal.png" alt="">
         <img id="signal" src="../icons/signal.png" alt="">
         <img src="../icons/wifi.png" alt="">
         <img src="../icons/battery.png" alt="">
@@ -54,9 +55,11 @@
     <div class="alturaDatos"></div>
     <div class="contSlide">
     <section class="slider-checkbox">
-        <input type="checkbox" id="check" checked/>
-        Datos Mobiles    <label  class="label " for="check"></label>
-    <span class="contSlide2">permitir a este dispositivo usar datos mobiles</span>
+      <input type="checkbox" onclick="unchecked()" name="checkbox " checked id="checked" />
+   <label  class="label"  for="checkbox" >Datos Mobiles
+</label>
+
+  <span class="contSlide2">permitir a este dispositivo usar datos mobiles</span>
    <hr>
    <div class="contSlide2">
    <a href="">Ajustes avanzados<img src="../icons/go.png" alt=""></a> 
