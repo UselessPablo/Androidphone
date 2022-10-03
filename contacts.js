@@ -1,5 +1,6 @@
 
 
+
 let contactos = allStorage();
 
 mostrarContactos(contactos);
@@ -63,18 +64,23 @@ function allStorage() {
 }
 
 function mostrarContactos(contactos) {
-    contactos.forEach(contacto => {
+  
+     
+                  contactos.forEach(contacto  => {
         const node = document.createElement("button");
         node.setAttribute('class', 'my-template');
-        node.setAttribute('id', contacto.id++)
+        node.setAttribute('id', contacto.id++);
         const textnode = document.createTextNode(contacto.nombre + " " + contacto.apellido + '\n' + contacto.telefono + '\n' + contacto.correo);
+        
+       // node.appendChild(imagen);
         node.appendChild(textnode);
         let color = (contacto.color);
         node.style.backgroundColor = `#${color}`;
         document.getElementById("lista").appendChild(node);
+                 
     });
+        
 }
-
 function openModal() {
     const modalContent = document.getElementById('modalContacts');
     modalContent.style.display = ('block');
@@ -82,7 +88,7 @@ function openModal() {
 
 function contactoNuevo(contacto) {
     const node = document.createElement("button");
-    const textnode = document.createTextNode(contacto.nombre + " " + contacto.apellido + '\n' + contacto.telefono + '\n' + contacto.correo);
+    const textnode = document.createTextNode(peronaje.image + contacto.nombre + " " + contacto.apellido + '\n' + contacto.telefono + '\n' + contacto.correo);
     node.appendChild(textnode);
     document.getElementById("lista").appendChild(node);
     const randomColor = Math.floor(Math.random() * 16777215).toString(16);
@@ -133,3 +139,31 @@ function suma() {
     contactos = allStorage();
     return contactos.length;
 }
+// // Fetch url rick y morty
+
+
+// btnSaved.addEventListener('click', async () => {
+
+//     const personajes = await getData();
+//     console.log(personajes);
+//     personajes.forEach(personaje => {
+//         const div = document.createElement('div');
+//         div.setAttribute('class', 'divList');
+//         const li = document.createElement('li');
+//         li.setAttribute('class', 'listCards');
+//         li.classList.add('listCards');
+//         li.innerHTML = `
+//         <img src="${personaje.image}">
+//         <h2>${personaje.name}</h2> 
+//         <p>${personaje.species}<p>
+//         <button>${personaje.id = ''}</button>       
+        
+//         `
+//         li.style.textAlign = 'center', li.style.listStyle = 'none';
+//         document.body.append(div)
+//         div.appendChild(li)
+//     })
+
+
+// });
+

@@ -456,8 +456,7 @@ button {
 .digit:active,
 .dig:active {
   background-color: #6ddbdb;
-  padding: 1px;
-  border-radius: 3rem;
+
 }
 
 #call:hover {
@@ -1014,7 +1013,7 @@ button:hover {
   img{
     border-radius: 100px 0 120px 0 ;
     box-shadow: 10px 0 10px 0 grey;
-    width: 140px;
+    width: 100px;
   }
 button{
   width: 50px;
@@ -1024,18 +1023,4 @@ button{
   background-image: url('../icons/phonec.png');
   background-size: cover;
 }
-}
-#rick{
-  border-radius: 60px 0 60px 0;
-  box-shadow: 5px 0 5px 0 gray;
-  width: 150px;
-  text-align: center;
-  color: #41746f;
-  background-color: whitesmoke;
-  padding: 20px;
-  margin-left: 400px;
-  margin-top: 50px;
-  font-family: 'maven pro';
-  font-weight: bold;
-  font-size: 1rem;
 }
