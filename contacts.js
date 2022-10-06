@@ -1,6 +1,7 @@
 
 
 
+
 let contactos = allStorage();
 
 mostrarContactos(contactos);
@@ -64,20 +65,15 @@ function allStorage() {
 }
 
 function mostrarContactos(contactos) {
-  
-     
-                  contactos.forEach(contacto  => {
+        contactos.forEach(contacto  => {
         const node = document.createElement("button");
         node.setAttribute('class', 'my-template');
         node.setAttribute('id', contacto.id++);
-        const textnode = document.createTextNode(contacto.nombre + " " + contacto.apellido + '\n' + contacto.telefono + '\n' + contacto.correo);
-        
-       // node.appendChild(imagen);
+        const textnode = document.createTextNode(contacto.nombre + "   " + contacto.apellido + '   ' + contacto.telefono + '  ' + contacto.correo);
         node.appendChild(textnode);
         let color = (contacto.color);
         node.style.backgroundColor = `#${color}`;
-        document.getElementById("lista").appendChild(node);
-                 
+        document.getElementById("lista").appendChild(node);    
     });
         
 }
@@ -87,6 +83,7 @@ function openModal() {
 }
 
 function contactoNuevo(contacto) {
+    
     const node = document.createElement("button");
     const textnode = document.createTextNode(peronaje.image + contacto.nombre + " " + contacto.apellido + '\n' + contacto.telefono + '\n' + contacto.correo);
     node.appendChild(textnode);
@@ -96,8 +93,6 @@ function contactoNuevo(contacto) {
     const btnContact = document.createElement('button');
     btnContact.setAttribute('class', 'my-template');
     btnContact.id = contacto.id;
-    // btnContact.setAttribute('id', contacto.id);
-
     btnContact.innerHTML;
     lista.appendChild(btnContact);
 }
@@ -118,10 +113,8 @@ function openModal2() {
 }
 
 let btnToast = document.querySelectorAll('.my-template');
-
 for (var i = 0; i < btnToast.length; i++) {
     btnToast[i].addEventListener('click', (boton) => {
-
         Swal.fire({
             title: 'Llamar a este contacto: ',
             showDenyButton: true,
@@ -139,31 +132,33 @@ function suma() {
     contactos = allStorage();
     return contactos.length;
 }
+
 // // Fetch url rick y morty
 
+const btnFetch = document.getElementById('rickAnd');
+const getData = async () => {
+    const response = await fetch('https://rickandmortyapi.com/api/character');
+    const data = await response.json();
+    return data.results;
+}
+getData();
 
-// btnSaved.addEventListener('click', async () => {
-
-//     const personajes = await getData();
-//     console.log(personajes);
-//     personajes.forEach(personaje => {
-//         const div = document.createElement('div');
-//         div.setAttribute('class', 'divList');
-//         const li = document.createElement('li');
-//         li.setAttribute('class', 'listCards');
-//         li.classList.add('listCards');
-//         li.innerHTML = `
-//         <img src="${personaje.image}">
-//         <h2>${personaje.name}</h2> 
-//         <p>${personaje.species}<p>
-//         <button>${personaje.id = ''}</button>       
-        
-//         `
-//         li.style.textAlign = 'center', li.style.listStyle = 'none';
-//         document.body.append(div)
-//         div.appendChild(li)
-//     })
-
-
-// });
-
+btnFetch.addEventListener('click', async () => {
+    const characters = await getData();
+    characters.forEach(character => {
+        const div = document.createElement('div');
+        div.setAttribute('class', 'divList');
+        const li = document.createElement('li');
+        li.setAttribute('class', 'listCards');
+        li.classList.add('listCards');
+        li.innerHTML = `
+        <img src="${character.image}">   
+        <h1>${character.name}</h1>
+        <h2>${character.status}</h2> 
+        <button class='my-template'>${character.id}</button>   
+        `
+        li.style.textAlign = 'center', li.style.listStyle = 'none';
+        document.body.append(div)
+        div.appendChild(li)
+    });
+});

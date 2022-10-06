@@ -1,5 +1,7 @@
-// let contactos = allStorage();
 
+$(window).on('load', function () {
+  $('#offcanvasBottom').offcanvas('show');
+});
 
 mostrarContacto();
 
@@ -14,21 +16,16 @@ function allStorage() {
 }
 
 function mostrarContacto() {
-
   let contactoSeleccionado = localStorage.getItem('contactoSeleccionado');
   let contacto = localStorage.getItem(contactoSeleccionado);
-
   let devolucionDeContacto = JSON.parse(contacto);
-
   let node = document.getElementById('output');
   const textnode = document.createTextNode(devolucionDeContacto.telefono);
   node.appendChild(textnode);
-
-
 }
+
 function llamada() {
   var count = 0;
-
   $(".digit").on('click', function () {
     let num = ($(this).clone().children().remove().end().text());
     if (count < 11) {
@@ -43,19 +40,15 @@ function llamada() {
   })
 }
 
-
 const llamar = document.getElementById('llamar');
 llamar.addEventListener('click', () => {
-
   let sonido = new Audio('../sounds/llamada.mp3');
-  console.log(sonido);
   let contactoSeleccionado = localStorage.getItem('contactoSeleccionado');
   let contacto = localStorage.getItem(contactoSeleccionado);
   let devolucionDeContacto = JSON.parse(contacto);
   sonido.play();
   let timerInterval
   Swal.fire({
-    
     title: 'Llamando al ' + devolucionDeContacto.telefono,
     timer: 13400,
     timerProgressBar: true,
@@ -70,9 +63,9 @@ llamar.addEventListener('click', () => {
       clearInterval(timerInterval)
       Swal.fire({
         title: 'El número '+ devolucionDeContacto.telefono + ' no se encuentra disponible'
-      })
+      });
     }
-  })
-})
+  });
+});
 
 

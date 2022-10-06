@@ -907,10 +907,21 @@ button:hover {
     display: flex;
     justify-content: end;
     background-image: url("../icons/phonec.png");
-    background-size: cover; }
+    background-size: cover;
+    color: transparent; }
 
 .back {
   width: 31px;
   margin-bottom: 7px;
   margin-left: 7px;
   padding: 2px; }
+
+.my-template {
+  border-radius: 0.7rem;
+  padding: 6px;
+  margin-left: 100px;
+  cursor: pointer; }
+
+.offcanvas-body {
+  flex-grow: 1;
+  padding: 1rem 1rem; }
