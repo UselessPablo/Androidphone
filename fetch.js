@@ -10,10 +10,11 @@ const getData = async () => {
 }
 getData();
 
-btn.addEventListener('click', async () => {
+async function prints() {
 
     const characters = await getData();
     console.log(characters);
+    
     characters.forEach(character => {
         const div = document.createElement('div');
         div.setAttribute('class', 'divList');
@@ -29,8 +30,8 @@ btn.addEventListener('click', async () => {
         li.style.textAlign = 'center', li.style.listStyle = 'none';
         document.body.append(div)
         div.appendChild(li)
-
+     //   localStorage.setItem('character', character.image);
     });
-});
-
+};
+prints();
 

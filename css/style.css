@@ -925,3 +925,6 @@ button:hover {
 .offcanvas-body {
   flex-grow: 1;
   padding: 1rem 1rem; }
+
+#llamar {
+  cursor: pointer; }

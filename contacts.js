@@ -65,7 +65,7 @@ function allStorage() {
 }
 
 function mostrarContactos(contactos) {
-        contactos.forEach(contacto  => {
+    contactos.forEach(contacto => {
         const node = document.createElement("button");
         node.setAttribute('class', 'my-template');
         node.setAttribute('id', contacto.id++);
@@ -73,9 +73,9 @@ function mostrarContactos(contactos) {
         node.appendChild(textnode);
         let color = (contacto.color);
         node.style.backgroundColor = `#${color}`;
-        document.getElementById("lista").appendChild(node);    
+        document.getElementById("lista").appendChild(node);
     });
-        
+
 }
 function openModal() {
     const modalContent = document.getElementById('modalContacts');
@@ -83,9 +83,9 @@ function openModal() {
 }
 
 function contactoNuevo(contacto) {
-    
+
     const node = document.createElement("button");
-    const textnode = document.createTextNode(peronaje.image + contacto.nombre + " " + contacto.apellido + '\n' + contacto.telefono + '\n' + contacto.correo);
+    const textnode = document.createTextNode(contacto.nombre + "   " + contacto.apellido + '   ' + contacto.telefono + '\n' + contacto.correo);
     node.appendChild(textnode);
     document.getElementById("lista").appendChild(node);
     const randomColor = Math.floor(Math.random() * 16777215).toString(16);
@@ -143,9 +143,10 @@ const getData = async () => {
 }
 getData();
 
-btnFetch.addEventListener('click', async () => {
+async function prints() {
     const characters = await getData();
     characters.forEach(character => {
+        //   localStorage.setItem(character.id, JSON.stringify(new contactosRick));
         const div = document.createElement('div');
         div.setAttribute('class', 'divList');
         const li = document.createElement('li');
@@ -153,12 +154,25 @@ btnFetch.addEventListener('click', async () => {
         li.classList.add('listCards');
         li.innerHTML = `
         <img src="${character.image}">   
-        <h1>${character.name}</h1>
-        <h2>${character.status}</h2> 
-        <button class='my-template'>${character.id}</button>   
+        <h2>${character.name}</h2>
+        <button id="llamar">${character.id}</button>   
         `
         li.style.textAlign = 'center', li.style.listStyle = 'none';
         document.body.append(div)
         div.appendChild(li)
     });
-});
+};
+prints();
+const llamar = document.getElementById('llamar');
+       llamar.addEventListener('click', ()=>{
+        Swal.fire({
+            title: 'Llamar a este contacto: ',
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: 'Llamar',
+            denyButtonText: `No, gracias`,
+        })
+    })
+
+
+

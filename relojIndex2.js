@@ -8,7 +8,6 @@ function startTime() {
     let minutes = actualhour.getMinutes();
     let seconds = actualhour.getSeconds();
 
-
     document.getElementById('hours').textContent = hour;
     if (minutes < 10) {
         minutes = "0" + minutes
@@ -33,7 +32,6 @@ function startTime2() {
     let minutes = actualhour.getMinutes();
     let seconds = actualhour.getSeconds();
 
-
     document.getElementById('hours2').textContent = hour;
     if (minutes < 10) {
         minutes = "0" + minutes
@@ -56,6 +54,10 @@ setInterval(startTime2, 1000);
 
 let search = document.getElementById('search');
 let text = document.getElementById('texto');
+function goGoogle() {
+    let google = document.getElementsByClassName('googleW')
+    window.open(url = "https://www.google.com/")
+}
 
 search.addEventListener('mouseout', mouseOut);
 search.addEventListener('mouseover', mouseOver);
@@ -63,24 +65,20 @@ search.addEventListener('mouseover', mouseOver);
 function mouseOut() {
     text.classList.add('small');
     search.style.background = 'white';
-    search.style.fontFamily = 'roboto';
     search.style.paddingLeft = ' 25px';
-
-
 }
+
 function mouseOver() {
     text.classList.add('big');
     search.innerHTML = "Buscar en Google";
+    search.style.fontFamily = 'maven pro';
     search.style.background = 'grey';
     text.style.paddingLeft = ' 25px';
 }
 let wallpapers = document.getElementById('wallpaper');
 let body = document.getElementsByTagName("body");
-
 let imagen1 = true;
 let imagen2 = false;
-
-
 
 function updateWalpaper() {
     wallpapers.onclick =
@@ -89,43 +87,24 @@ function updateWalpaper() {
                 document.body.style.backgroundImage = "url('./img/retro.webp')";
                 imagen1 = false;
                 imagen2 = true;
-         let w1  = localStorage.setItem('wallpaper','imagen1');
-            wallpapers.ondblclick=
-            localStorage.getItem(wallpapers.imagen1);
-        }
+            }
             else if
                 (imagen2 == true) {
                 changeWallpaper1();
                 imagen2 = false;
-             let w2 = localStorage.setItem('wallpaper','imagen2' );
             }
             else
                 document.body.style.backgroundImage = "url('./img/fondoand.png')";
-            
-                
-    function changeWallpaper1() {
-        document.body.style.backgroundImage = "url('./img/montaña.jpg')"
-       let w3 = localStorage.setItem('wallpaper','imagen3');
-    } 
-                
-}
-     
+
+            function changeWallpaper1() {
+                document.body.style.backgroundImage = "url('./img/montaña.jpg')"
+            }
+        }
+    document.body.style.backgroundImage = "url('./img/montaña.jpg')"
+
 }
 updateWalpaper();
 
-
-// function displayItems() {
-//     let i;
-    
-//     for (i = 0; i < localStorage.length; i++) {
-//         x = localStorage.key(i);
-        
-//         console.log(x);
-//     }
-   
-
-// }
-//displayItems();
 
 
 
