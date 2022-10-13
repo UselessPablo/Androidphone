@@ -12,7 +12,8 @@
 
 <body id="bgBody">
 
-  <button id="btnUnlock" onclick="myFunc()">
+  <div id="btnUnlock">
+    
     <div class="alturaGen">
       <div class="relojDiv2">
         <a href="https://weather.com/es-AR/tiempo/hoy/l/-41.18,-71.37?par=google"><img src="./icons/nieve.png
@@ -22,14 +23,20 @@
         </a>
       </div>
     </div>
-
-    <div class="swipeTo">
-
-      <p class="heartbeat">Toca para desbloquear</p>
+<div class="inputPass">
+    <form  id="newPass">
+  <input  name="password" id="lockScr" type="password" placeholder="Pin.."> 
+    <button id="okPass" type="submit">ok</button>
+    </form>
     </div>
-  </button>
+    
+    <div class="swipeTo">
+      <p class="heartbeat">Introduce el Pin para desbloquear</p>
+    </div>
+  </div>
 
-  <script src="./looks.js"></script>
+       
+  <script src="./index.js"></script>
 </body>
 
 </html>

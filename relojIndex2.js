@@ -1,7 +1,5 @@
 
 
-
-
 function startTime() {
     const actualhour = new Date();
     let hour = actualhour.getHours();
@@ -75,6 +73,7 @@ function mouseOver() {
     search.style.background = 'grey';
     text.style.paddingLeft = ' 25px';
 }
+
 let wallpapers = document.getElementById('wallpaper');
 let body = document.getElementsByTagName("body");
 let imagen1 = true;

@@ -764,10 +764,10 @@ section {
   border-style: none;
   min-height: 100vh;
   width: 100vw;
-  align-items: center;
-  button {
-    margin: 5px;
-  }
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
 .relojDiv2 {
   display: inline-block;
@@ -1043,4 +1043,31 @@ color: transparent;
 }
 #llamar{
   cursor: pointer;
+}
+#lockScr{
+  width: 80px;
+    align-self: flex-end;
+    margin-right: 8px;
+    color: black;
+}
+#okPass{
+  margin-top: 6px;
+  border-radius: 1.4rem;
+  color: black;
+  background-color: white;
+}
+.inputPass{
+  height: 80px;
+  display: flex;
+}
+#myModal{
+  
+  img{
+    margin-left: 36%;
+    height: 150px;
+    width: 200px;
+    display: flex;
+    margin-top: 10px;
+
+  }
 }

@@ -1,27 +1,47 @@
-var suma = 4;  // var alcance global
-let nombre1 = 'pablo'; // alcance local
-const PI = 3.14; // es bueno declararla en mayúscula constante no se puede cambiar el valor//
-suma = 20;
+class passwords {
+    constructor(password) {
+        this.password = password;
+    }
+}
+const pass = document.getElementById('lockScr');
+const passwordAdd = JSON.parse(localStorage.getItem("passwords")) ?? [];
+document.getElementById("newPass").addEventListener("submit", addPass);
+function addPass(e) {
+    e.preventDefault();
+    const formulario = new FormData(e.target)
+    let password = formulario.get("password");
+    const newPass = new passwords(password);
+    passwords.password = localStorage.setItem("passwords", JSON.stringify(newPass));
+    
+    console.log(password);
+    if (password ==='' || password.length < 4 || password.length >= 5){
+        alert('debe contener 4 dígitos');
+        e.target.reset();
+    }
+    else{
+    
+        
+        alert("guardada con exito");
+        window.location.href ='./index2.html';
+}
+}
+//     if ((newPass /^[0 - 9]+$/))  {
+//         console.log(newPass);
+//         alert("la clave debe tener 4 digitos numericos");
+//         e.target.reset();
+//     } else {
+//         passwords.password = localStorage.setItem(
+//             "passwords",
+//             JSON.stringify(newPass)
+//         );
+//         alert("guardada con exito");
+//     }
+// }
 
-let numero1 = 1;
-let numero2 = 2;
+//     console.log(newPass);
+//     allPass.push(newPass);
+//     localStorage.setItem('allPass', JSON.stringify(newPass));
 
-let resultado = numero1 + numero2;
-prompt // ingresar datos en la pantalla
-let nombre = prompt( 'Ingrese su Nombre para comenzar');
-let saludo = "Hola " + nombre + ", Bienvenido a mi sitio Web, presiona continuar"
-console.log (nombre);
-alert (saludo);
-let edad = prompt (' Cuantos años tenes ?');
-let años = "Te queda poco....disfruta gracias"
-alert (años);
-let continuar = prompt ('Queres continuar?');
-if (continuar = si) {
-    let si = prompt (bueno, sigamos);
-};
-
-
-
-
-
+//     //  e.target.reset();
+// }
 
