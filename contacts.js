@@ -1,3 +1,29 @@
+import {fetchData} from "./responseFetch.js";
+
+
+async function getData (){
+let data = await(fetchData());
+console.log(data);
+}
+getData();
+// const rick = [];
+
+// console.log(rick);
+// const getData = async () => {
+//     const response = await fetch('https://rickandmortyapi.com/api/character');
+//     const data = await response.json();
+//     return data.results;   
+// }
+// getData();
+// async function prints() {
+//     const characters = await getData();
+//     characters.forEach(character =>{
+//         let imagen = (character.image);
+//         rick.push(await imagen);
+//     })
+// };
+// //rick.push(prints());
+// prints();
 
 
 
@@ -25,7 +51,7 @@ btn.onclick = () => {
         color: randomColor,
 
     }
-    localStorage.setItem(contacto.id, JSON.stringify(contacto));
+    localStorage.setItem(contacto.id, JSON.stringify(contacto)) ?? contactos;
     printed();
     cerrarContact();
     contactoNuevo(contacto);
@@ -49,33 +75,45 @@ function resetForm() {
 }
 
 function allStorage() {
-    var contactos = [],
-        keys = Object.keys(localStorage),
-        i = keys.length;
+    const contactos = [];
+    let keys = Object.keys(localStorage);
+    let i = keys.length;
     while (i--) {
-        if (keys[i] != "contactoSeleccionado")
+        if (Number.parseInt(keys[i]))
             contactos.push(JSON.parse(localStorage.getItem(keys[i])));
     }
-    contactos = contactos.sort((a, b) => {
-        if (a.nombre < b.nombre) {
-            return -1;
-        }
-    });
+    // contactos = contactos.sort((a, b) => {
+    //     if (a.nombre < b.nombre) {
+    //         return -1;
+    //     }
+    // });
     return contactos;
 }
 
-function mostrarContactos(contactos) {
-    contactos.forEach(contacto => {
-        const node = document.createElement("button");
-        node.setAttribute('class', 'my-template');
-        node.setAttribute('id', contacto.id++);
-        const textnode = document.createTextNode(contacto.nombre + "   " + contacto.apellido + '   ' + contacto.telefono + '  ' + contacto.correo);
-        node.appendChild(textnode);
-        let color = (contacto.color);
-        node.style.backgroundColor = `#${color}`;
-        document.getElementById("lista").appendChild(node);
-    });
+function getRandomImage() {
+    let cantidad = rick.length;
+    let nroRandom = Math.random() * cantidad;
+    nroRandom = Math.floor(nroRandom); // 99
+    console.log("numero", nroRandom);
+    console.log(rick[0]);
+    return rick[2];
+}
 
+function mostrarContactos(contactos) {
+
+    if (contactos.length > 0) {
+        contactos.forEach(contacto => {
+            const node = document.createElement("button");
+            node.setAttribute('class', 'my-template');
+            node.setAttribute('id', contacto.id++);
+            const textnode = document.createTextNode(contacto.nombre + "   " + contacto.apellido + '   ' + contacto.telefono + '  ' + contacto.correo);
+            node.appendChild(textnode);
+            let color = (contacto.color);
+            node.style.backgroundColor = `#${color}`;
+            document.getElementById("lista").appendChild(node);
+            console.log(getRandomImage());
+        });
+    }
 }
 function openModal() {
     const modalContent = document.getElementById('modalContacts');
@@ -92,7 +130,7 @@ function contactoNuevo(contacto) {
     node.style.backgroundColor = "#" + randomColor;
     const btnContact = document.createElement('button');
     btnContact.setAttribute('class', 'my-template');
-    btnContact.id = contacto.id;
+    btnContact.id = contacto.id, character.id;
     btnContact.innerHTML;
     lista.appendChild(btnContact);
 }
@@ -122,7 +160,9 @@ for (var i = 0; i < btnToast.length; i++) {
             confirmButtonText: 'Llamar',
             denyButtonText: `No, gracias`,
         }).then((result) => {
-            localStorage.setItem("contactoSeleccionado", boton.target.id);
+            if (result.isConfirmed) {
+                localStorage.setItem("contactoSeleccionado", boton.target.id);
+            }
             result.isConfirmed ? window.location.href = "../views/telefono.html" : Swal.fire('Gracias');
         });
     });
@@ -132,47 +172,11 @@ function suma() {
     contactos = allStorage();
     return contactos.length;
 }
-
+    
 // // Fetch url rick y morty
 
-const btnFetch = document.getElementById('rickAnd');
-const getData = async () => {
-    const response = await fetch('https://rickandmortyapi.com/api/character');
-    const data = await response.json();
-    return data.results;
-}
-getData();
 
-async function prints() {
-    const characters = await getData();
-    characters.forEach(character => {
-        //   localStorage.setItem(character.id, JSON.stringify(new contactosRick));
-        const div = document.createElement('div');
-        div.setAttribute('class', 'divList');
-        const li = document.createElement('li');
-        li.setAttribute('class', 'listCards');
-        li.classList.add('listCards');
-        li.innerHTML = `
-        <img src="${character.image}">   
-        <h2>${character.name}</h2>
-        <button id="llamar">${character.id}</button>   
-        `
-        li.style.textAlign = 'center', li.style.listStyle = 'none';
-        document.body.append(div)
-        div.appendChild(li)
-    });
-};
-prints();
-const llamar = document.getElementById('llamar');
-       llamar.addEventListener('click', ()=>{
-        Swal.fire({
-            title: 'Llamar a este contacto: ',
-            showDenyButton: true,
-            showCancelButton: true,
-            confirmButtonText: 'Llamar',
-            denyButtonText: `No, gracias`,
-        })
-    })
+
 
 
 

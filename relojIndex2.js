@@ -74,35 +74,35 @@ function mouseOver() {
     text.style.paddingLeft = ' 25px';
 }
 
-let wallpapers = document.getElementById('wallpaper');
-let body = document.getElementsByTagName("body");
-let imagen1 = true;
-let imagen2 = false;
+// let wallpapers = document.getElementById('wallpaper');
+// let body = document.getElementsByTagName("body");
+// let imagen1 = true;
+// let imagen2 = false;
 
-function updateWalpaper() {
-    wallpapers.onclick =
-        function changeWallpaper() {
-            if (imagen1 == true) {
-                document.body.style.backgroundImage = "url('./img/retro.webp')";
-                imagen1 = false;
-                imagen2 = true;
-            }
-            else if
-                (imagen2 == true) {
-                changeWallpaper1();
-                imagen2 = false;
-            }
-            else
-                document.body.style.backgroundImage = "url('./img/fondoand.png')";
+// function updateWalpaper() {
+//     wallpapers.onclick =
+//         function changeWallpaper() {
+//             if (imagen1 == true) {
+//                 document.body.style.backgroundImage = "url('./img/retro.webp')";
+//                 imagen1 = false;
+//                 imagen2 = true;
+//             }
+//             else if
+//                 (imagen2 == true) {
+//                 changeWallpaper1();
+//                 imagen2 = false;
+//             }
+//             else
+//                 document.body.style.backgroundImage = "url('./img/fondoand.png')";
 
-            function changeWallpaper1() {
-                document.body.style.backgroundImage = "url('./img/montaña.jpg')"
-            }
-        }
-    document.body.style.backgroundImage = "url('./img/montaña.jpg')"
+//             function changeWallpaper1() {
+//                 document.body.style.backgroundImage = "url('./img/montaña.jpg')"
+//             }
+//         }
+//     document.body.style.backgroundImage = "url('./img/montaña.jpg')"
 
-}
-updateWalpaper();
+// }
+// updateWalpaper();
 
 
 
