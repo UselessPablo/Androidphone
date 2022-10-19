@@ -871,18 +871,19 @@ section {
 .contactos {
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 20%;
   height: 80px;
   border-radius: 1.6rem;
   background-color: #7bade085;
   margin-bottom: 30px;
   align-items: center;
+  margin-left: 60%;
 }
 .sticky2 {
   z-index: 3;
   position: fixed;
   bottom: 40px;
-  margin-left: 24%;
+  margin-left: 60%;
   img {
     width: 40px;
   }
@@ -1001,6 +1002,7 @@ button:hover {
   display: flex;
  justify-content: space-around;
  align-items: center;
+ width: 50px;
   p{
     font-family: 'maven pro';
     color: black;
@@ -1036,6 +1038,7 @@ color: transparent;
   padding: 6px;
   margin-left: 100px;
   cursor: pointer;
+width: 350px;
 }
 .offcanvas-body {
     flex-grow: 1;

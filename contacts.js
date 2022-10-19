@@ -1,36 +1,26 @@
-import {fetchData} from "./responseFetch.js";
+let rick = [];
+function getCharacters(done) {
+    let results = fetch('https://rickandmortyapi.com/api/character');
 
-
-async function getData (){
-let data = await(fetchData());
-console.log(data);
+    results
+        .then(response => response.json())
+        .then(data => {
+            done(data)
+        });
 }
-getData();
-// const rick = [];
 
-// console.log(rick);
-// const getData = async () => {
-//     const response = await fetch('https://rickandmortyapi.com/api/character');
-//     const data = await response.json();
-//     return data.results;   
-// }
-// getData();
-// async function prints() {
-//     const characters = await getData();
-//     characters.forEach(character =>{
-//         let imagen = (character.image);
-//         rick.push(await imagen);
-//     })
-// };
-// //rick.push(prints());
-// prints();
+getCharacters(any => {
+    // console.log(data.results)
+    any.results.forEach(personaje => {
+        rick.push(personaje.image);
+    })
+    // console.log(rick);
+})
 
-
-
-
-let contactos = allStorage();
-
-mostrarContactos(contactos);
+setTimeout(function () {
+    let contactos = allStorage();
+    mostrarContactos(contactos);
+}, 100);
 
 const btn = document.getElementById('on')
 
@@ -49,18 +39,17 @@ btn.onclick = () => {
         telefono: telefono,
         correo: correo,
         color: randomColor,
-
     }
-    localStorage.setItem(contacto.id, JSON.stringify(contacto)) ?? contactos;
+    localStorage.setItem(contacto.id, JSON.stringify(contacto));
     printed();
     cerrarContact();
-    contactoNuevo(contacto);
+     contactoNuevo(contacto);
     openPopUp();
 }
 
 function printed() {
     let data = localStorage.getItem('contacto');
-    let devolucionDeContacto = JSON.parse(data);
+  //  let devolucionDeContacto = JSON.parse(data);
 }
 
 function cerrarContact() {
@@ -82,11 +71,6 @@ function allStorage() {
         if (Number.parseInt(keys[i]))
             contactos.push(JSON.parse(localStorage.getItem(keys[i])));
     }
-    // contactos = contactos.sort((a, b) => {
-    //     if (a.nombre < b.nombre) {
-    //         return -1;
-    //     }
-    // });
     return contactos;
 }
 
@@ -94,24 +78,29 @@ function getRandomImage() {
     let cantidad = rick.length;
     let nroRandom = Math.random() * cantidad;
     nroRandom = Math.floor(nroRandom); // 99
-    console.log("numero", nroRandom);
-    console.log(rick[0]);
-    return rick[2];
+    return rick[nroRandom];
 }
 
 function mostrarContactos(contactos) {
 
     if (contactos.length > 0) {
         contactos.forEach(contacto => {
+            
             const node = document.createElement("button");
             node.setAttribute('class', 'my-template');
             node.setAttribute('id', contacto.id++);
-            const textnode = document.createTextNode(contacto.nombre + "   " + contacto.apellido + '   ' + contacto.telefono + '  ' + contacto.correo);
+        //     const li = document.createElement('button');
+        //     li.setAttribute('class', 'my-template');
+        //     li.classList.add('listCards','my-template');
+        //     li.innerHTML = `
+        // <img src="${getRandomImage()}">   `
+        //     node.appendChild(li);
+        const textnode = document.createTextNode(contacto.nombre + "   " + contacto.apellido + '   ' + contacto.telefono + '  ' + contacto.correo);
             node.appendChild(textnode);
             let color = (contacto.color);
             node.style.backgroundColor = `#${color}`;
             document.getElementById("lista").appendChild(node);
-            console.log(getRandomImage());
+          
         });
     }
 }
@@ -172,8 +161,8 @@ function suma() {
     contactos = allStorage();
     return contactos.length;
 }
-    
-// // Fetch url rick y morty
+
+
 
 
 
