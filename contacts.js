@@ -44,8 +44,9 @@ btn.onclick = () => {
     }
     localStorage.setItem(contacto.id, JSON.stringify(contacto));
     printed();
+    mostrarContactos(contactos);
     cerrarContact();
-     contactoNuevo(contacto);
+    // contactoNuevo(contacto);
     openPopUp();
 }
 
@@ -101,8 +102,25 @@ function mostrarContactos(contactos) {
             node.appendChild(textnode);
             let color = (contacto.color);
             node.style.backgroundColor = `#${color}`;
+// lamada al contacto 
             document.getElementById("lista").appendChild(node);
-          
+            let btnToast = document.querySelectorAll('.my-template');
+            for (var i = 0; i < btnToast.length; i++) {
+                btnToast[i].addEventListener('click', (boton) => {
+                    Swal.fire({
+                        title: 'Llamar a este contacto: ',
+                        showDenyButton: true,
+                        showCancelButton: true,
+                        confirmButtonText: 'Llamar',
+                        denyButtonText: `No, gracias`,
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            localStorage.setItem("contactoSeleccionado", boton.target.id);
+                        }
+                        result.isConfirmed ? window.location.href = "../views/telefono.html" : Swal.fire('Gracias');
+                    });
+                });
+            };
         });
     }
 }
@@ -111,20 +129,20 @@ function openModal() {
     modalContent.style.display = ('block');
 }
 
-function contactoNuevo(contacto) {
+// function contactoNuevo(contacto) {
 
-    const node = document.createElement("button");
-    const textnode = document.createTextNode(contacto.nombre + "   " + contacto.apellido + '   ' + contacto.telefono + '\n' + contacto.correo);
-    node.appendChild(textnode);
-    document.getElementById("lista").appendChild(node);
-    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    node.style.backgroundColor = "#" + randomColor;
-    const btnContact = document.createElement('button');
-    btnContact.setAttribute('class', 'my-template');
-    btnContact.id = contacto.id, character.id;
-    btnContact.innerHTML;
-    lista.appendChild(btnContact);
-}
+//     const node = document.createElement("button");
+//     const textnode = document.createTextNode(contacto.nombre + "   " + contacto.apellido + '   ' + contacto.telefono + '\n' + contacto.correo);
+//     node.appendChild(textnode);
+//     document.getElementById("lista").appendChild(node);
+//     const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+//     node.style.backgroundColor = "#" + randomColor;
+//     const btnContact = document.createElement('button');
+//     btnContact.setAttribute('class', 'my-template');
+//     btnContact.id = contacto.id, character.id;
+//     btnContact.innerHTML;
+//     lista.appendChild(btnContact);
+// }
 
 function openPopUp() {
     let popUp = document.getElementById('mensajePop');
@@ -141,23 +159,6 @@ function openModal2() {
     modalContent.style.display = ('block');
 }
 
-let btnToast = document.querySelectorAll('.my-template');
-for (var i = 0; i < btnToast.length; i++) {
-    btnToast[i].addEventListener('click', (boton) => {
-        Swal.fire({
-            title: 'Llamar a este contacto: ',
-            showDenyButton: true,
-            showCancelButton: true,
-            confirmButtonText: 'Llamar',
-            denyButtonText: `No, gracias`,
-        }).then((result) => {
-            if (result.isConfirmed) {
-                localStorage.setItem("contactoSeleccionado", boton.target.id);
-            }
-            result.isConfirmed ? window.location.href = "../views/telefono.html" : Swal.fire('Gracias');
-        });
-    });
-};
 
 function suma() {
     contactos = allStorage();
