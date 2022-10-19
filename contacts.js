@@ -1,3 +1,5 @@
+
+
 let rick = [];
 function getCharacters(done) {
     let results = fetch('https://rickandmortyapi.com/api/character');
@@ -89,12 +91,12 @@ function mostrarContactos(contactos) {
             const node = document.createElement("button");
             node.setAttribute('class', 'my-template');
             node.setAttribute('id', contacto.id++);
-        //     const li = document.createElement('button');
-        //     li.setAttribute('class', 'my-template');
-        //     li.classList.add('listCards','my-template');
-        //     li.innerHTML = `
-        // <img src="${getRandomImage()}">   `
-        //     node.appendChild(li);
+            const li = document.createElement('button');
+            li.setAttribute('class', 'my-template');
+            li.classList.add('listCards','my-template');
+            li.innerHTML = `
+        <img src="${getRandomImage()}">   `
+            node.appendChild(li);
         const textnode = document.createTextNode(contacto.nombre + "   " + contacto.apellido + '   ' + contacto.telefono + '  ' + contacto.correo);
             node.appendChild(textnode);
             let color = (contacto.color);
