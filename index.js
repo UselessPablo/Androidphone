@@ -19,29 +19,7 @@ function addPass(e) {
         e.target.reset();
     }
     else{
-    
-        
         alert("guardada con exito");
         window.location.href ='./index2.html';
 }
 }
-//     if ((newPass /^[0 - 9]+$/))  {
-//         console.log(newPass);
-//         alert("la clave debe tener 4 digitos numericos");
-//         e.target.reset();
-//     } else {
-//         passwords.password = localStorage.setItem(
-//             "passwords",
-//             JSON.stringify(newPass)
-//         );
-//         alert("guardada con exito");
-//     }
-// }
-
-//     console.log(newPass);
-//     allPass.push(newPass);
-//     localStorage.setItem('allPass', JSON.stringify(newPass));
-
-//     //  e.target.reset();
-// }
-

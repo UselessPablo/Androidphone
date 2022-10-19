@@ -3,7 +3,6 @@
 let rick = [];
 function getCharacters(done) {
     let results = fetch('https://rickandmortyapi.com/api/character');
-
     results
         .then(response => response.json())
         .then(data => {
@@ -12,12 +11,10 @@ function getCharacters(done) {
 }
 
 getCharacters(any => {
-    // console.log(data.results)
     any.results.forEach(personaje => {
         rick.push(personaje.image);
-    })
-    // console.log(rick);
-})
+    });
+});
 
 setTimeout(function () {
     let contactos = allStorage();
@@ -43,21 +40,14 @@ btn.onclick = () => {
         color: randomColor,
     }
     localStorage.setItem(contacto.id, JSON.stringify(contacto));
-    printed();
-    mostrarContactos(contactos);
-    cerrarContact();
-    // contactoNuevo(contacto);
-    openPopUp();
-}
 
-function printed() {
-    let data = localStorage.getItem('contacto');
-  //  let devolucionDeContacto = JSON.parse(data);
+    mostrarContactos();
+    cerrarContact();
+    openPopUp();
 }
 
 function cerrarContact() {
     const modalContacts = document.getElementById('modalContacts');
-    const btnCancel = document.getElementById('off');
     modalContacts.style.display = "none";
     resetForm();
 }
@@ -80,7 +70,7 @@ function allStorage() {
 function getRandomImage() {
     let cantidad = rick.length;
     let nroRandom = Math.random() * cantidad;
-    nroRandom = Math.floor(nroRandom); // 99
+    nroRandom = Math.floor(nroRandom);
     return rick[nroRandom];
 }
 
@@ -88,31 +78,28 @@ function mostrarContactos(contactos) {
 
     if (contactos.length > 0) {
         contactos.forEach(contacto => {
-            
             const node = document.createElement("button");
             node.setAttribute('class', 'my-template');
             node.setAttribute('id', contacto.id++);
-            const li = document.createElement('button');
-            li.setAttribute('class', 'my-template');
-            li.classList.add('listCards','my-template');
+            const li = document.createElement('li');
+            li.setAttribute('class', 'contact');
+            li.classList.add('listCards', 'contact');
             li.innerHTML = `
         <img src="${getRandomImage()}">   `
             node.appendChild(li);
-        const textnode = document.createTextNode(contacto.nombre + "   " + contacto.apellido + '   ' + contacto.telefono + '  ' + contacto.correo);
+            const textnode = document.createTextNode(contacto.nombre + ' ' + contacto.apellido + ' ' + contacto.telefono + ' ' + contacto.correo);
             node.appendChild(textnode);
             let color = (contacto.color);
             node.style.backgroundColor = `#${color}`;
-// lamada al contacto 
+            // lamada al contacto 
             document.getElementById("lista").appendChild(node);
             let btnToast = document.querySelectorAll('.my-template');
             for (var i = 0; i < btnToast.length; i++) {
                 btnToast[i].addEventListener('click', (boton) => {
                     Swal.fire({
-                        title: 'Llamar a este contacto: ',
-                        showDenyButton: true,
+                        title: 'Llamar',
                         showCancelButton: true,
                         confirmButtonText: 'Llamar',
-                        denyButtonText: `No, gracias`,
                     }).then((result) => {
                         if (result.isConfirmed) {
                             localStorage.setItem("contactoSeleccionado", boton.target.id);
@@ -129,21 +116,6 @@ function openModal() {
     modalContent.style.display = ('block');
 }
 
-// function contactoNuevo(contacto) {
-
-//     const node = document.createElement("button");
-//     const textnode = document.createTextNode(contacto.nombre + "   " + contacto.apellido + '   ' + contacto.telefono + '\n' + contacto.correo);
-//     node.appendChild(textnode);
-//     document.getElementById("lista").appendChild(node);
-//     const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-//     node.style.backgroundColor = "#" + randomColor;
-//     const btnContact = document.createElement('button');
-//     btnContact.setAttribute('class', 'my-template');
-//     btnContact.id = contacto.id, character.id;
-//     btnContact.innerHTML;
-//     lista.appendChild(btnContact);
-// }
-
 function openPopUp() {
     let popUp = document.getElementById('mensajePop');
     popUp.classList.add('openPopUp');
@@ -159,13 +131,10 @@ function openModal2() {
     modalContent.style.display = ('block');
 }
 
-
 function suma() {
     contactos = allStorage();
     return contactos.length;
 }
-
-
 
 
 

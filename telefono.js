@@ -20,6 +20,7 @@ function mostrarContacto() {
   let contacto = localStorage.getItem(contactoSeleccionado);
   let devolucionDeContacto = JSON.parse(contacto);
   let node = document.getElementById('output');
+  console.log(devolucionDeContacto.telefono);
   const textnode = document.createTextNode(devolucionDeContacto.telefono);
   node.appendChild(textnode);
 }

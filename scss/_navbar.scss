@@ -1036,9 +1036,11 @@ color: transparent;
 .my-template{
   border-radius: 0.7rem;
   padding: 6px;
-  margin-left: 100px;
-  cursor: pointer;
-width: 350px;
+  margin-left: 60px;
+  font-family: 'maven pro';
+  font-weight: 600;
+  width: 290px;
+  filter: blur(0.3px);
 }
 .offcanvas-body {
     flex-grow: 1;
@@ -1073,4 +1075,11 @@ width: 350px;
     margin-top: 10px;
 
   }
+}
+.swal2-container.swal2-center>.swal2-popup {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+    background-color: red($color: #000000)
 }
