@@ -6,12 +6,10 @@ function startTime() {
     let minutes = actualhour.getMinutes();
     let seconds = actualhour.getSeconds();
 
-
     document.getElementById('hours').textContent = hour;
     if (minutes < 10) {
         minutes = "0" + minutes
     }
-
     if (seconds < 10) {
         seconds = "0" + seconds
     }
@@ -24,10 +22,6 @@ function startTime() {
 }
 startTime();
 setInterval(startTime, 1000);
-//  reloj central
-
-
-///Termina el  reloj en vivo
 
 
 

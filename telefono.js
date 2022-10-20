@@ -55,15 +55,13 @@ llamar.addEventListener('click', () => {
     timerProgressBar: true,
     didOpen: () => {
       Swal.showLoading()
-      //  const b = Swal.getHtmlContainer().querySelector('b')
       timerInterval = setInterval(() => {
-        //      b.textContent = Swal.getTimerLeft()
       }, 100)
     },
     willClose: () => {
       clearInterval(timerInterval)
       Swal.fire({
-        title: 'El número '+ devolucionDeContacto.telefono + ' no se encuentra disponible'
+        title: 'El número ' + devolucionDeContacto.telefono + ' no se encuentra disponible'
       });
     }
   });
